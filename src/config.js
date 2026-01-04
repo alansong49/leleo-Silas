@@ -360,19 +360,19 @@ const config = {
 		{
 			"go": "🔍 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "infinityfree",
-			"subtitle": "免费域名和服务器",
-			"text": "不知道好不好用，但是可以申请免费的服务器和域名",
-			"url": "https://dash.infinityfree.com/accounts",
+			"title": "稀土掘金",
+			"subtitle": "程序员必备网站",
+			"text": "跟csdn差不多但是没那么坑",
+			"url": "https://juejin.cn/",
 			"show": false
 		},
 		{
 			"go": "🔍 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "稀土掘金",
-			"subtitle": "程序员必备网站",
-			"text": "跟csdn差不多但是没那么坑",
-			"url": "https://juejin.cn/",
+			"title": "infinityfree",
+			"subtitle": "免费域名和服务器",
+			"text": "不知道好不好用，但是可以申请免费的服务器和域名",
+			"url": "https://dash.infinityfree.com/accounts",
 			"show": false
 		}
 	],
