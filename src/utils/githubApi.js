@@ -8,7 +8,7 @@ export async function getFileSha(owner, repo, path, branch, token) {
   try {
     const response = await fetch(url, {
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `token ${token}`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
@@ -50,7 +50,7 @@ export async function updateGitHubFile(owner, repo, path, content, message, bran
     const response = await fetch(url, {
       method: 'PUT',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `token ${token}`,
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
       },
@@ -59,9 +59,11 @@ export async function updateGitHubFile(owner, repo, path, content, message, bran
     
     if (!response.ok) {
       let errorMessage = '更新文件失败';
+      let errorData = {};
+      
       try {
-        const error = await response.json();
-        errorMessage = error.message || errorMessage;
+        errorData = await response.json();
+        errorMessage = errorData.message || errorMessage;
       } catch (e) {
         // 如果响应不是JSON，尝试读取文本
         errorMessage = response.statusText || errorMessage;
@@ -69,13 +71,21 @@ export async function updateGitHubFile(owner, repo, path, content, message, bran
       
       // 添加更详细的错误信息
       if (response.status === 401) {
-        errorMessage = '认证失败：Token无效或已过期';
+        if (errorData.message && errorData.message.includes('Bad credentials')) {
+          errorMessage = '认证失败：Token无效或已过期，请检查Token是否正确';
+        } else {
+          errorMessage = '认证失败：Token无效或已过期';
+        }
       } else if (response.status === 403) {
-        errorMessage = '权限不足：Token没有repo权限或被限制';
+        if (errorData.message && errorData.message.includes('API rate limit')) {
+          errorMessage = 'API 请求频率限制：请稍后再试';
+        } else {
+          errorMessage = '权限不足：Token没有repo权限或被限制，请检查Token权限设置';
+        }
       } else if (response.status === 404) {
-        errorMessage = '仓库或文件不存在';
-      } else if (response.status === 0 || errorMessage.includes('Failed to fetch')) {
-        errorMessage = '网络错误：可能是CORS限制，请使用后端代理';
+        errorMessage = '仓库或文件不存在，请检查仓库名称和路径是否正确';
+      } else if (response.status === 0 || errorMessage.includes('Failed to fetch') || errorMessage.includes('CORS')) {
+        errorMessage = '网络错误：GitHub API 不允许直接从浏览器调用（CORS限制）。请使用后端代理服务（如 Vercel Serverless Function）';
       }
       
       throw new Error(errorMessage);
