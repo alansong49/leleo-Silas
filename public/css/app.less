@@ -1,0 +1,1463 @@
+.v-card{
+    backdrop-filter: blur(var(--leleo-blur));
+    border-radius: 5%;
+    color: var(--leleo-vcard-color);
+}
+
+/* 确保图标正确显示 - Material Design Icons 已通过 main.js 引入 */
+/* 图标字体会通过 @mdi/font/css/materialdesignicons.css 自动加载 */
+
+/* 图标备用方案 */
+.v-icon {
+    font-family: 'Material Design Icons', 'Roboto', sans-serif !important;
+    font-feature-settings: 'liga';
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+/* 确保图片在所有设备上正确显示 */
+img, v-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 响应式图片容器 */
+.v-avatar,
+.v-img__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.vapp-fullscreen-background {
+    position: fixed;
+    background-color: #282c34;
+    z-index: -1;
+    
+    .floating-switch-container {
+        position: fixed;
+        right: 0;
+        z-index: 99;
+      }
+      
+    .floating-switch {
+        transform: translateX(53%); /* 初始状态下隐藏大部分 */
+        transition: transform 0.3s ease;
+    }
+    
+    .floating-switch:hover {
+        transform: translateX(0); /* 悬停时完全展开 */
+    }
+    /* 调整视频元素的样式，使其全屏作为背景 */
+    .video-bg {
+        position: fixed;
+        z-index: -100;
+        // left: 0;
+        // top: 0;
+        // width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        margin: auto;
+        background-clip: padding-box;
+        filter: brightness(var(--leleo-brightness));
+    }
+    .loading{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: #282c34;
+        z-index: 9999;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+    .fade-enter-active, .fade-leave-active { 
+        transition: opacity .8s
+      }
+    .fade-enter, .fade-leave-to { 
+        opacity: 0  
+    }
+
+    .leleo-left{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        &-welcome{
+            margin-top: 10px;
+            width: 100%;
+            color: var(--leleo-welcomtitle-color);
+            padding: 0 2rem;
+            font-family: "myfont";
+        }
+        &-avatar{
+            .musicplayer{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .musicplayer-text{
+                position: absolute;
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .leleo-spin {
+                animation: spin 6s linear infinite;
+            }
+            .loading-spinner {
+                position: absolute;
+                 top: 50%;
+                left: 50%;
+                 transform: translate(-50%, -50%); 
+                z-index: 1; 
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .fade-in {
+                animation: fadeIn .6s ease ;
+              }
+              
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+        .volume-control-container {
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .volume-btn {
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            .volume-slider-wrapper {
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                margin-left: 0.5rem;
+            }
+        }
+        .slide-fade-enter-active {
+            transition: all 0.3s ease;
+        }
+        .slide-fade-leave-active {
+            transition: all 0.3s ease;
+        }
+        .slide-fade-enter-from,
+        .slide-fade-leave-to {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        &-socialIconsContainer{
+            .leleo-social-bticon:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .clock-font{
+        font-family: "digitalfont";
+        font-weight: 800;
+    }
+    
+    // 标签编辑对话框样式
+    .tags-edit-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .tags-edit-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .tags-edit-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .tags-edit-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .tags-edit-content {
+            padding: 1.5rem;
+            max-height: 60vh;
+            overflow-y: auto;
+            
+            // 自定义滚动条样式
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 3px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 3px;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                }
+            }
+            
+            .tags-list-container {
+                margin-bottom: 1.5rem;
+                
+                .tag-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    animation: fadeInUp 0.3s ease;
+                    
+                    .tag-input {
+                        flex: 1;
+                        
+                        :deep(.v-field) {
+                            background: rgba(255, 255, 255, 0.08);
+                            border-color: rgba(255, 255, 255, 0.15);
+                            transition: all 0.3s ease;
+                            
+                            &:hover {
+                                background: rgba(255, 255, 255, 0.12);
+                                border-color: rgba(255, 255, 255, 0.25);
+                            }
+                            
+                            &:focus-within {
+                                background: rgba(255, 255, 255, 0.15);
+                                border-color: var(--leleo-vcard-color);
+                            }
+                        }
+                        
+                        :deep(.v-field__input) {
+                            color: var(--leleo-vcard-color);
+                        }
+                    }
+                    
+                    .tag-delete-btn {
+                        transition: all 0.2s ease;
+                        
+                        &:hover {
+                            transform: scale(1.1);
+                            color: #ff5252 !important;
+                        }
+                    }
+                }
+            }
+            
+            .add-tag-container {
+                display: flex;
+                gap: 0.75rem;
+                align-items: flex-start;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                
+                .new-tag-input {
+                    flex: 1;
+                    
+                    :deep(.v-field) {
+                        background: rgba(255, 255, 255, 0.08);
+                        border-color: rgba(255, 255, 255, 0.15);
+                        transition: all 0.3s ease;
+                        
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.12);
+                            border-color: rgba(255, 255, 255, 0.25);
+                        }
+                        
+                        &:focus-within {
+                            background: rgba(255, 255, 255, 0.15);
+                            border-color: var(--leleo-vcard-color);
+                        }
+                    }
+                    
+                    :deep(.v-field__input) {
+                        color: var(--leleo-vcard-color);
+                    }
+                    
+                    :deep(.v-label) {
+                        color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+                
+                .add-tag-btn {
+                    margin-top: 0;
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    color: var(--leleo-vcard-color);
+                    transition: all 0.3s ease;
+                    
+                    &:hover:not(:disabled) {
+                        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+                    
+                    &:disabled {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+        
+        .tags-edit-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .save-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    // 添加项目卡片对话框样式
+    .add-project-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .add-project-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .add-project-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .add-project-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .add-project-content {
+            padding: 1.5rem;
+            max-height: 70vh;
+            overflow-y: auto;
+            
+            // 自定义滚动条样式
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 3px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 3px;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                }
+            }
+            
+            :deep(.v-field) {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.15);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
+                
+                &:focus-within {
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: var(--leleo-vcard-color);
+                }
+            }
+            
+            :deep(.v-field__input) {
+                color: var(--leleo-vcard-color);
+            }
+            
+            :deep(.v-label) {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            
+            :deep(.v-messages) {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+            :deep(.v-switch) {
+                .v-switch__track {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+                
+                .v-switch__thumb {
+                    background: rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+        
+        .add-project-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .save-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+    
+    // 管理员密码对话框样式
+    .admin-password-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .admin-password-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .admin-password-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .admin-password-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .admin-password-content {
+            padding: 1.5rem;
+            
+            :deep(.v-field) {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.15);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
+                
+                &:focus-within {
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: var(--leleo-vcard-color);
+                }
+            }
+            
+            :deep(.v-field__input) {
+                color: var(--leleo-vcard-color);
+            }
+            
+            :deep(.v-label) {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            
+            :deep(.v-messages) {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .admin-mode-indicator {
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                padding: 0.75rem;
+                background: rgba(76, 175, 80, 0.1);
+                border: 1px solid rgba(76, 175, 80, 0.3);
+                border-radius: 8px;
+            }
+        }
+        
+        .admin-password-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .verify-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover:not(:disabled) {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+                
+                &:disabled {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    
+    // 删除项目卡片确认对话框样式
+    .delete-project-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .delete-project-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .delete-project-title {
+            background: rgba(244, 67, 54, 0.1);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .delete-project-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .delete-project-content {
+            padding: 1.5rem;
+            
+            .delete-warning {
+                text-align: center;
+                
+                p {
+                    color: var(--leleo-vcard-color);
+                    margin: 0.5rem 0;
+                    font-size: 1rem;
+                }
+                
+                .project-title {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin: 1rem 0;
+                    padding: 0.75rem;
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 8px;
+                }
+                
+                .warning-text {
+                    color: #ff5252;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        
+        .delete-project-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .delete-confirm-btn {
+                background: linear-gradient(135deg, rgba(244, 67, 54, 0.2), rgba(244, 67, 54, 0.1));
+                border: 1px solid rgba(244, 67, 54, 0.3);
+                color: #ff5252;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: linear-gradient(135deg, rgba(244, 67, 54, 0.3), rgba(244, 67, 54, 0.2));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+                }
+            }
+        }
+    }
+    
+    // 退出管理员模式确认对话框样式
+    .exit-admin-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .exit-admin-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .exit-admin-title {
+            background: rgba(255, 152, 0, 0.1);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .exit-admin-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .exit-admin-content {
+            padding: 1.5rem;
+            
+            .exit-warning {
+                text-align: center;
+                
+                p {
+                    color: var(--leleo-vcard-color);
+                    margin: 0.5rem 0;
+                    font-size: 1rem;
+                }
+                
+                .warning-text {
+                    color: #ff9800;
+                    font-weight: 500;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        
+        .exit-admin-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .exit-confirm-btn {
+                background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 152, 0, 0.1));
+                border: 1px solid rgba(255, 152, 0, 0.3);
+                color: #ff9800;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: linear-gradient(135deg, rgba(255, 152, 0, 0.3), rgba(255, 152, 0, 0.2));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+                }
+            }
+        }
+    }
+    
+    // GitHub 提交对话框样式
+    .github-commit-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .github-commit-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .github-commit-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .github-commit-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .github-commit-content {
+            padding: 1.5rem;
+            
+            .github-commit-loading {
+                text-align: center;
+                padding: 2rem 0;
+                color: var(--leleo-vcard-color);
+            }
+            
+            .github-commit-success {
+                text-align: center;
+                padding: 2rem 0;
+                
+                .success-text {
+                    color: var(--leleo-vcard-color);
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 0;
+                }
+                
+                .success-detail {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 0.9rem;
+                }
+            }
+            
+            .github-commit-error {
+                text-align: center;
+                padding: 2rem 0;
+                
+                .error-text {
+                    color: #ff5252;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin: 1rem 0;
+                }
+                
+                .error-detail {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 0.9rem;
+                    margin-top: 0.5rem;
+                }
+            }
+            
+            :deep(.v-field) {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.15);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
+                
+                &:focus-within {
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: var(--leleo-vcard-color);
+                }
+            }
+            
+            :deep(.v-field__input) {
+                color: var(--leleo-vcard-color);
+            }
+            
+            :deep(.v-label) {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            
+            :deep(.v-messages) {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            
+            :deep(.v-alert) {
+                background: rgba(255, 255, 255, 0.05);
+                border-color: rgba(255, 255, 255, 0.1);
+                
+                code {
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    font-family: monospace;
+                }
+                
+                a {
+                    color: var(--leleo-vcard-color);
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+        .github-commit-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn, .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .commit-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover:not(:disabled) {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+                
+                &:disabled {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    
+    // 修改管理员密码对话框样式
+    .change-password-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .change-password-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .change-password-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .change-password-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .change-password-content {
+            padding: 1.5rem;
+            
+            .password-error-alert {
+                :deep(.v-alert) {
+                    background: rgba(244, 67, 54, 0.1);
+                    border-color: rgba(244, 67, 54, 0.3);
+                    color: #ff5252;
+                }
+            }
+            
+            :deep(.v-field) {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.15);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.12);
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
+                
+                &:focus-within {
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: var(--leleo-vcard-color);
+                }
+            }
+            
+            :deep(.v-field__input) {
+                color: var(--leleo-vcard-color);
+            }
+            
+            :deep(.v-label) {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            
+            :deep(.v-messages) {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        .change-password-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .cancel-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+            
+            .save-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover:not(:disabled) {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+                
+                &:disabled {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    
+    // 保存成功提示对话框样式
+    .save-success-dialog {
+        .v-overlay__content {
+            backdrop-filter: blur(10px);
+        }
+    }
+    
+    .save-success-card {
+        backdrop-filter: blur(20px);
+        background: rgba(40, 44, 52, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        overflow: hidden;
+        
+        .save-success-title {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--leleo-vcard-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            
+            .close-btn {
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: var(--leleo-vcard-color);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        
+        .save-success-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+        
+        .save-success-content {
+            padding: 2rem 1.5rem;
+            
+            .save-success-message {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--leleo-vcard-color);
+                font-size: 1rem;
+                line-height: 1.6;
+                text-align: center;
+                
+                .v-icon {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        
+        .save-success-actions {
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            
+            .confirm-btn {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--leleo-vcard-color);
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+}
+  
+/* 添加一个::before伪元素降低背景图片的亮度，而不会影响background元素的其他内容 */
+.vapp-fullscreen-background::before {
+    content: "";
+    background-image: var(--leleo-background-image-url); 
+    transition: background-image 0.8s ease;
+    background-size:cover;
+    background-position: center;
+    position: absolute;   
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 调整亮度值  */
+    filter: brightness(var(--leleo-brightness));
+}
+.vapp-fullscreen-background.radius-before::before{
+    border-radius: 16px;
+}
+
+// 修改头像/Favicon/站点标题对话框样式
+.avatar-edit-dialog {
+    .v-overlay__content {
+        backdrop-filter: blur(10px);
+    }
+}
+
+.avatar-edit-card {
+    backdrop-filter: blur(20px);
+    background: rgba(40, 44, 52, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    
+    .avatar-edit-title {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.2rem 1.5rem;
+        display: flex;
+        align-items: center;
+        color: var(--leleo-vcard-color);
+        font-weight: 600;
+        font-size: 1.2rem;
+        
+        .close-btn {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: var(--leleo-vcard-color);
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    .avatar-edit-divider {
+        border-color: rgba(255, 255, 255, 0.1);
+        margin: 0;
+    }
+    
+    .avatar-edit-content {
+        padding: 1.5rem;
+        max-height: 70vh;
+        overflow-y: auto;
+        
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+    
+    .avatar-edit-actions {
+        padding: 1rem 1.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        
+        .cancel-btn, .close-btn {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: var(--leleo-vcard-color);
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+        
+        .save-btn {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--leleo-vcard-color);
+            transition: all 0.3s ease;
+            
+            &:hover:not(:disabled) {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+            
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+// 修改打字机文字对话框样式
+.typewriter-edit-dialog {
+    .v-overlay__content {
+        backdrop-filter: blur(10px);
+    }
+}
+
+.typewriter-edit-card {
+    backdrop-filter: blur(20px);
+    background: rgba(40, 44, 52, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    
+    .typewriter-edit-title {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.2rem 1.5rem;
+        display: flex;
+        align-items: center;
+        color: var(--leleo-vcard-color);
+        font-weight: 600;
+        font-size: 1.2rem;
+        
+        .close-btn {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: var(--leleo-vcard-color);
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    .typewriter-edit-divider {
+        border-color: rgba(255, 255, 255, 0.1);
+        margin: 0;
+    }
+    
+    .typewriter-edit-content {
+        padding: 1.5rem;
+        max-height: 70vh;
+        overflow-y: auto;
+        
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+        
+        .typewriter-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeInUp 0.3s ease;
+            
+            .typewriter-input {
+                flex: 1;
+                
+                :deep(.v-field) {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: rgba(255, 255, 255, 0.15);
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.12);
+                        border-color: rgba(255, 255, 255, 0.25);
+                    }
+                    
+                    &:focus-within {
+                        background: rgba(255, 255, 255, 0.15);
+                        border-color: var(--leleo-vcard-color);
+                    }
+                }
+                
+                :deep(.v-field__input) {
+                    color: var(--leleo-vcard-color);
+                }
+            }
+            
+            .typewriter-delete-btn {
+                color: rgba(255, 255, 255, 0.6);
+                transition: all 0.2s ease;
+                
+                &:hover {
+                    color: #ff5252;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        
+        .add-typewriter-container {
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+            margin-top: 1rem;
+            
+            .new-typewriter-input {
+                flex: 1;
+                
+                :deep(.v-field) {
+                    background: rgba(255, 255, 255, 0.08);
+                    border-color: rgba(255, 255, 255, 0.15);
+                }
+                
+                :deep(.v-field__input) {
+                    color: var(--leleo-vcard-color);
+                }
+            }
+            
+            .add-typewriter-btn {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .typewriter-edit-actions {
+        padding: 1rem 1.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        
+        .cancel-btn {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: var(--leleo-vcard-color);
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+        
+        .save-btn {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--leleo-vcard-color);
+            transition: all 0.3s ease;
+            
+            &:hover:not(:disabled) {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.12));
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+            
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
