@@ -5,7 +5,7 @@ export const GITHUB_CONFIG = {
   BRANCH: import.meta.env.VITE_GITHUB_BRANCH || 'main',
   APP_ID: import.meta.env.VITE_GITHUB_APP_ID || '2569770',
   ENCRYPT_KEY: import.meta.env.VITE_GITHUB_ENCRYPT_KEY || 'wudishiduomejimo',
-  TOKEN: import.meta.env.VITE_GITHUB_TOKEN || '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',
+  TOKEN: import.meta.env.VITE_GITHUB_TOKEN || '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',
   FILE_PATH: 'src/config.js' // 要更新的配置文件路径
 };
 
