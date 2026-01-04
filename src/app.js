@@ -37,7 +37,7 @@ export default {
       deleteProjectDialog: false,
       deletingProjectIndex: null,
       githubCommitDialog: false,
-      githubToken: decrypt('Cw0cOl47UVgiJzgZAwUDHU1uB2cBbi5cIglaFycaVxVBFEQxKCYtBw=='), // Encrypted token
+      githubToken: decrypt('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'), // Encrypted token
       showGitHubToken: false,
       githubCommitStatus: null, // null, 'loading', 'success', 'error'
       githubCommitError: '',
