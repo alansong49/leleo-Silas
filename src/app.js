@@ -696,7 +696,7 @@ export default {
       }
       // 如果没有 Token，使用默认的解密后的 Token
       if (!this.githubToken || this.githubToken.trim() === '') {
-        this.githubToken = decrypt('Cw0cOl47UVgiJzgZAwUDHU1uB2cBbi5cIglaFycaVxVBFEQxKCYtBw==');
+        this.githubToken = decrypt('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');
       }
       this.githubCommitStatus = null;
       this.githubCommitError = '';
