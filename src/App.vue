@@ -799,7 +799,7 @@
                   <li>点击 "Generate new token (classic)"</li>
                   <li>勾选 <code>repo</code> 权限</li>
                   <li>生成并复制 Token</li>
-                  <li>密钥：ghp下划线Y0QOTY45tU5mQ3H5uooJjPrlBBqnUD1qKXJo</li>
+                  <li>密钥：ghp_Y0QOTY45tU5mQ3H5uooJjPrlBBqnUD1qKX删J删o</li>
                 </ol>
               </div>
             </v-alert>
