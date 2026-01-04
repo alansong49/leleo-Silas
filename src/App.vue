@@ -456,7 +456,7 @@
         <v-divider class="add-project-divider"></v-divider>
 
         <v-card-text class="add-project-content">
-          <v-form ref="addProjectForm">
+          <v-form ref="addProjectForm" @submit.prevent="saveProject">
             <v-text-field
               v-model="newProject.go"
               label="按钮文本（如：🚀 前往）"
@@ -510,6 +510,7 @@
               variant="outlined"
               class="mb-3"
               :rules="[v => !!v || '请输入链接地址']"
+              @keyup.enter="saveProject"
             ></v-text-field>
 
             <v-switch
@@ -776,7 +777,7 @@
             <p class="error-detail">{{ githubCommitError }}</p>
           </div>
           
-          <v-form v-else ref="githubCommitForm">
+          <v-form v-else ref="githubCommitForm" @submit.prevent="commitToGitHub">
             <v-text-field
               v-model="githubToken"
               label="GitHub Personal Access Token"
@@ -789,6 +790,7 @@
               persistent-hint
               :append-inner-icon="showGitHubToken ? 'mdi-eye-off' : 'mdi-eye'"
               @click:append-inner="showGitHubToken = !showGitHubToken"
+              @keyup.enter="commitToGitHub"
             ></v-text-field>
             
             <v-alert type="info" density="compact" class="mb-3">
@@ -799,7 +801,6 @@
                   <li>点击 "Generate new token (classic)"</li>
                   <li>勾选 <code>repo</code> 权限</li>
                   <li>生成并复制 Token</li>
-                  <li>密钥：ghp_Y0QOTY45tU5mQ3H5uooJjPrlBBqnUD1qKXJ删o</li>
                 </ol>
               </div>
             </v-alert>
@@ -879,7 +880,7 @@
             </v-alert>
           </div>
           
-          <v-form ref="changePasswordForm">
+          <v-form ref="changePasswordForm" @submit.prevent="changeAdminPassword">
             <v-text-field
               v-model="currentPassword"
               label="当前密码"
@@ -914,6 +915,7 @@
                 v => !!v || '请确认新密码',
                 v => v === newPassword || '两次输入的密码不一致'
               ]"
+              @keyup.enter="changeAdminPassword"
             ></v-text-field>
           </v-form>
         </v-card-text>
@@ -973,6 +975,7 @@
               variant="outlined"
               hint="浏览器标签页显示的标题"
               persistent-hint
+              @keyup.enter="saveAvatarChanges"
             ></v-text-field>
           </div>
 
@@ -985,6 +988,7 @@
               variant="outlined"
               hint="页面显示的欢迎文字"
               persistent-hint
+              @keyup.enter="saveAvatarChanges"
             ></v-text-field>
           </div>
         </v-card-text>
