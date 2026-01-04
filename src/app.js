@@ -652,6 +652,43 @@ export default {
         console.log('Project deleted successfully', { projectcards: this.projectcards, configdata: this.configdata.projectcards });
       }
     },
+    handleSwapProjectCards(sourceIndex, targetIndex) {
+      if (!this.isAdminMode) {
+        this.showAdminModeRequired();
+        return;
+      }
+      
+      if (!this.projectcards || sourceIndex === targetIndex || 
+          sourceIndex < 0 || targetIndex < 0 ||
+          sourceIndex >= this.projectcards.length || targetIndex >= this.projectcards.length) {
+        return;
+      }
+      
+      // 交换项目卡片位置 - 创建新数组确保 Vue 3 响应式更新
+      const newProjectcards = [...this.projectcards];
+      const temp = newProjectcards[sourceIndex];
+      newProjectcards[sourceIndex] = newProjectcards[targetIndex];
+      newProjectcards[targetIndex] = temp;
+      
+      // 替换整个数组以触发响应式更新
+      this.projectcards = newProjectcards;
+      
+      // 同步更新配置数据
+      if (this.configdata.projectcards) {
+        const newConfigProjectcards = [...this.configdata.projectcards];
+        const configTemp = newConfigProjectcards[sourceIndex];
+        newConfigProjectcards[sourceIndex] = newConfigProjectcards[targetIndex];
+        newConfigProjectcards[targetIndex] = configTemp;
+        this.configdata.projectcards = newConfigProjectcards;
+      }
+      
+      console.log('Project cards swapped successfully', { 
+        sourceIndex, 
+        targetIndex, 
+        projectcards: this.projectcards, 
+        configdata: this.configdata.projectcards 
+      });
+    },
     openGitHubCommitDialog() {
       if (!this.isAdminMode) {
         this.showAdminModeRequired();

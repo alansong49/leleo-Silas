@@ -71,12 +71,24 @@
             <v-row>
               <v-col
                 v-for="(item,key) in projectcards"
+                :key="key"
                 cols="6"
                 md="4"
                 lg="3"
                 :style="xs?{'padding': '6px'}:{}"
               >
-                <v-card class="" @dblclick="$emit('open-edit-project-dialog', key)">
+                <v-card 
+                  class="project-card"
+                  :class="{'draggable': isAdminMode, 'dragging': draggedIndex === key, 'drag-over': dragOverIndex === key}"
+                  @dblclick="$emit('open-edit-project-dialog', key)"
+                  :draggable="isAdminMode"
+                  @dragstart="handleDragStart(key, $event)"
+                  @dragend="handleDragEnd"
+                  @dragover.prevent="handleDragOver(key, $event)"
+                  @dragenter.prevent="handleDragEnter(key)"
+                  @dragleave="handleDragLeave(key)"
+                  @drop.prevent="handleDrop(key, $event)"
+                >
                   <v-img
                     aspect-ratio="1.7778"
                     :src= item.img
@@ -163,7 +175,9 @@ export default {
 				{ title: '百度', value: 'baidu' },
 				{ title: 'Yandex', value: 'yandex' },
 				{ title: 'DuckDuckGo', value: 'duckduckgo' },
-			]
+			],
+			draggedIndex: null,
+			dragOverIndex: null
 		}
 	},
     setup() {
@@ -253,6 +267,55 @@ export default {
         if (event.target.tagName === 'IMG') {
           event.target.style.display = 'none';
         }
+      },
+      handleDragStart(index, event) {
+        if (!this.isAdminMode) {
+          event.preventDefault();
+          return;
+        }
+        this.draggedIndex = index;
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/html', index);
+        // 设置拖拽时的视觉效果
+        event.target.style.opacity = '0.5';
+      },
+      handleDragEnd(event) {
+        this.draggedIndex = null;
+        this.dragOverIndex = null;
+        event.target.style.opacity = '1';
+      },
+      handleDragOver(index, event) {
+        if (!this.isAdminMode || this.draggedIndex === null) {
+          return;
+        }
+        if (this.draggedIndex !== index) {
+          event.dataTransfer.dropEffect = 'move';
+        }
+      },
+      handleDragEnter(index) {
+        if (!this.isAdminMode || this.draggedIndex === null) {
+          return;
+        }
+        if (this.draggedIndex !== index) {
+          this.dragOverIndex = index;
+        }
+      },
+      handleDragLeave(index) {
+        if (this.dragOverIndex === index) {
+          this.dragOverIndex = null;
+        }
+      },
+      handleDrop(targetIndex, event) {
+        if (!this.isAdminMode || this.draggedIndex === null) {
+          return;
+        }
+        event.preventDefault();
+        const sourceIndex = this.draggedIndex;
+        if (sourceIndex !== targetIndex) {
+          this.$emit('swap-project-cards', sourceIndex, targetIndex);
+        }
+        this.draggedIndex = null;
+        this.dragOverIndex = null;
       }
     }
 };
@@ -277,5 +340,30 @@ export default {
 		transform: scale(1.1);
 		color: #ff5252 !important;
 	}
+}
+
+.project-card {
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.project-card.draggable {
+	cursor: move;
+}
+
+.project-card.draggable:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card.dragging {
+	opacity: 0.5;
+	transform: scale(0.95);
+}
+
+.project-card.drag-over {
+	transform: scale(1.05);
+	border: 2px dashed var(--leleo-vcard-color);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 </style>

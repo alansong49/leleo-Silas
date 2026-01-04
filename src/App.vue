@@ -163,7 +163,8 @@
                 @open-admin-password-dialog="openAdminPasswordDialog"
                 @show-admin-mode-required="showAdminModeRequired"
                 @delete-project="handleDeleteProject"
-                @open-typewriter-edit-dialog="openTypewriterEditDialog"></homeright>
+                @open-typewriter-edit-dialog="openTypewriterEditDialog"
+                @swap-project-cards="handleSwapProjectCards"></homeright>
             </v-col>
         </v-row>
     </div>
