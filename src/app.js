@@ -37,7 +37,7 @@ export default {
       deleteProjectDialog: false,
       deletingProjectIndex: null,
       githubCommitDialog: false,
-      githubToken: decrypt('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'), // Encrypted token
+      githubToken: decrypt('Z2hwX2NMMk5zSTJNa3BoYk9FS0dVWG43a2s0a3BFd0FhSTJNRE05Tg=='), // Encrypted token
       showGitHubToken: false,
       githubCommitStatus: null, // null, 'loading', 'success', 'error'
       githubCommitError: '',
@@ -696,7 +696,7 @@ export default {
       }
       // 如果没有 Token，使用默认的解密后的 Token
       if (!this.githubToken || this.githubToken.trim() === '') {
-        this.githubToken = decrypt('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');
+        this.githubToken = decrypt('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');
       }
       this.githubCommitStatus = null;
       this.githubCommitError = '';
