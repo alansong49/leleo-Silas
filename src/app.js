@@ -9,7 +9,6 @@ import config from './config.js';
 import { getCookie } from './utils/cookieUtils.js';
 import { setMeta,getFormattedTime,getFormattedDate,dataConsole } from './utils/common.js';
 import { commitConfigToGitHub } from './utils/githubApi.js';
-import { decrypt } from './utils/encryptUtils.js';
 import { useDisplay } from 'vuetify'
 
 export default {
@@ -37,7 +36,7 @@ export default {
       deleteProjectDialog: false,
       deletingProjectIndex: null,
       githubCommitDialog: false,
-      githubToken: decrypt('Cw0cOl47UVgiJzgZAwUDHU1uB2cBbi5cIglaFycaVxVBFEQxKCYtBw=='), // Encrypted token
+      githubToken: '', // 用户需要手动输入 Token
       showGitHubToken: false,
       githubCommitStatus: null, // null, 'loading', 'success', 'error'
       githubCommitError: '',
@@ -694,10 +693,8 @@ export default {
         this.showAdminModeRequired();
         return;
       }
-      // 如果没有 Token，使用默认的解密后的 Token
-      if (!this.githubToken || this.githubToken.trim() === '') {
-        this.githubToken = decrypt('Cw0cOl47UVgiJzgZAwUDHU1uB2cBbi5cIglaFycaVxVBFEQxKCYtBw==');
-      }
+      // 清空 Token，要求用户每次手动输入
+      this.githubToken = '';
       this.githubCommitStatus = null;
       this.githubCommitError = '';
       this.githubCommitDialog = true;
