@@ -3,8 +3,8 @@
  * 使用 XOR 加密算法
  */
 
-// 加密密钥（可以自定义）
-const ENCRYPT_KEY = 'leleo_encrypt_key_2024';
+// 加密密钥（从环境变量读取，如果没有则使用默认值，但不建议在生产环境使用默认值）
+const ENCRYPT_KEY = import.meta.env.VITE_ENCRYPT_KEY || '';
 
 /**
  * 加密字符串
