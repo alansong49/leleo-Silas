@@ -152,7 +152,7 @@
                         <v-btn variant="tonal" class="setbtn" key="3" icon="$error" size="31" color="var(--leleo-vcard-color)"></v-btn>
                         </v-speed-dial>
                     </v-col>
-                    <v-col class="ma-1" cols="auto">
+                    <!-- <v-col class="ma-1" cols="auto">
                         <v-btn
                             variant="tonal"
                             color="var(--leleo-vcard-color)"
@@ -166,7 +166,7 @@
                         >
                             {{ icpText }}
                         </v-btn>
-                    </v-col>
+                    </v-col> -->
                     </v-row>
                 </v-container>
             </v-col>
