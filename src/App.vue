@@ -142,6 +142,7 @@
                             variant="tonal"
                             v-bind="activatorProps"
                             icon="mdi-cog"
+                            @dblclick="openIcpEditDialog"
                             ></v-fab>
                         </template>
                         <v-btn variant="tonal" class="setbtn" key="1" icon="mdi-key-chain" @click="dialog1 = true" size="31" color="var(--leleo-vcard-color)"></v-btn>
@@ -157,13 +158,13 @@
                             color="var(--leleo-vcard-color)"
                             density="compact"
                             rounded="pill"
-                            :href="'https://icp.gov.moe/?keyword=20260017'"
+                            :href="icpUrl"
                             target="_blank"
                             class="icp-btn"
                             :prepend-icon="'mdi-certificate'"
                             style="text-transform: none; font-size: 0.75rem;"
                         >
-                            萌ICP备20260017号
+                            {{ icpText }}
                         </v-btn>
                     </v-col>
                     </v-row>
@@ -1026,6 +1027,76 @@
             @click.prevent="saveAvatarChanges"
             class="save-btn"
             :disabled="!newSiteTitle || !newWelcomeTitle"
+          >
+            <v-icon start>mdi-content-save</v-icon>
+            保存
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <!-- 编辑备案号对话框 -->
+    <v-dialog v-model="icpEditDialog" max-width="500px" class="icp-edit-dialog" persistent>
+      <v-card class="icp-edit-card" variant="tonal">
+        <v-card-title class="icp-edit-title">
+          <v-icon class="mr-2">mdi-certificate</v-icon>
+          <span>编辑备案号</span>
+          <v-spacer></v-spacer>
+          <v-btn
+            icon
+            size="small"
+            variant="text"
+            @click="closeIcpEditDialog"
+            class="close-btn"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+
+        <v-divider class="icp-edit-divider"></v-divider>
+
+        <v-card-text class="icp-edit-content">
+          <v-form ref="icpEditForm" @submit.prevent="saveIcp">
+            <v-text-field
+              v-model="editingIcpText"
+              label="备案号文本"
+              density="compact"
+              variant="outlined"
+              class="mb-3"
+              :rules="[v => !!v || '请输入备案号文本']"
+              @keyup.enter="saveIcp"
+            ></v-text-field>
+
+            <v-text-field
+              v-model="editingIcpUrl"
+              label="备案号链接"
+              density="compact"
+              variant="outlined"
+              class="mb-3"
+              :rules="[v => !!v || '请输入备案号链接']"
+              @keyup.enter="saveIcp"
+            ></v-text-field>
+          </v-form>
+        </v-card-text>
+
+        <v-divider class="icp-edit-divider"></v-divider>
+
+        <v-card-actions class="icp-edit-actions">
+          <v-spacer></v-spacer>
+          <v-btn
+            variant="text"
+            @click="closeIcpEditDialog"
+            class="cancel-btn"
+          >
+            取消
+          </v-btn>
+          <v-btn
+            type="button"
+            color="primary"
+            variant="tonal"
+            @click.prevent="saveIcp"
+            class="save-btn"
+            :disabled="!editingIcpText || !editingIcpUrl"
           >
             <v-icon start>mdi-content-save</v-icon>
             保存
