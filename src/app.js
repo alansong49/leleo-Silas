@@ -55,6 +55,11 @@ export default {
       typewriterEditDialog: false,
       editingTypewriterStrings: [],
       newTypewriterString: '',
+      icpEditDialog: false,
+      editingIcpText: '萌ICP备20260017号',
+      editingIcpUrl: 'https://icp.gov.moe/?keyword=20260017',
+      icpText: '萌ICP备20260017号',
+      icpUrl: 'https://icp.gov.moe/?keyword=20260017',
       addProjectDialog: false,
       editingProjectIndex: null,
       newProject: {
@@ -119,6 +124,15 @@ export default {
     this.projectcards = JSON.parse(JSON.stringify(this.configdata.projectcards || []));
     this.socialPlatformIcons = this.configdata.socialPlatformIcons;
     this.personalizedtags = this.configdata.tags;
+    // 初始化ICP信息
+    if (this.configdata.icp) {
+      this.icpText = this.configdata.icp.text || '萌ICP备20260017号';
+      this.icpUrl = this.configdata.icp.url || 'https://icp.gov.moe/?keyword=20260017';
+    } else {
+      // 如果configdata中没有icp字段，使用默认值
+      this.icpText = '萌ICP备20260017号';
+      this.icpUrl = 'https://icp.gov.moe/?keyword=20260017';
+    }
     this.isloading = true;
     let imageurl = "";
     this.dataConsole();
@@ -905,6 +919,50 @@ export default {
       if (event.target.tagName === 'IMG') {
         event.target.style.display = 'none';
       }
+    },
+    openIcpEditDialog() {
+      if (!this.isAdminMode) {
+        this.showAdminModeRequired();
+        return;
+      }
+      this.editingIcpText = this.icpText;
+      this.editingIcpUrl = this.icpUrl;
+      this.icpEditDialog = true;
+    },
+    closeIcpEditDialog() {
+      this.icpEditDialog = false;
+      this.editingIcpText = '';
+      this.editingIcpUrl = '';
+    },
+    saveIcp() {
+      if (!this.isAdminMode) {
+        this.showAdminModeRequired();
+        return;
+      }
+      
+      // 验证必填字段
+      if (!this.editingIcpText || !this.editingIcpText.trim()) {
+        alert('请输入备案号文本');
+        return;
+      }
+      if (!this.editingIcpUrl || !this.editingIcpUrl.trim()) {
+        alert('请输入备案号链接');
+        return;
+      }
+
+      // 更新备案号信息
+      this.icpText = this.editingIcpText.trim();
+      this.icpUrl = this.editingIcpUrl.trim();
+      
+      // 更新配置数据
+      if (!this.configdata.icp) {
+        this.configdata.icp = {};
+      }
+      this.configdata.icp.text = this.icpText;
+      this.configdata.icp.url = this.icpUrl;
+
+      this.closeIcpEditDialog();
+      this.showSaveSuccessDialog();
     },
   }
 };
