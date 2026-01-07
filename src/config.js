@@ -358,12 +358,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🔍 前往",
+			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "稀土掘金",
-			"subtitle": "程序员必备网站",
-			"text": "跟csdn差不多但是没那么坑",
-			"url": "https://juejin.cn/",
+			"title": "ITDOG",
+			"subtitle": "在线ping",
+			"text": "用于测试域名或者ip通讯与联通情况",
+			"url": "https://www.itdog.cn/",
 			"show": false
 		},
 		{
@@ -373,6 +373,15 @@ const config = {
 			"subtitle": "免费域名和服务器",
 			"text": "不知道好不好用，但是可以申请免费的服务器和域名",
 			"url": "https://dash.infinityfree.com/accounts",
+			"show": false
+		},
+		{
+			"go": "🔍 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "稀土掘金",
+			"subtitle": "程序员必备网站",
+			"text": "跟csdn差不多但是没那么坑",
+			"url": "https://juejin.cn/",
 			"show": false
 		}
 	],
