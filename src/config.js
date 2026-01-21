@@ -250,21 +250,21 @@ const config = {
 			"show": false
 		},
 		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "edgetunnel 设置页面",
+			"subtitle": "我已经部署好的魔法",
+			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
+			"url": "https://proxy-eky.pages.dev/admin",
+			"show": false
+		},
+		{
 			"go": "🗂️ 前往",
 			"img": "/img/xmkp/sunshine.jpg",
 			"title": "网盘",
 			"subtitle": "alan",
 			"text": "不知道用什么部署",
 			"url": "https://leleo.top",
-			"show": false
-		},
-		{
-			"go": "📝 前往",
-			"img": "/img/xmkp/yjym.jpg",
-			"title": "一级域名",
-			"subtitle": "2个免费的org域名",
-			"text": "可以获得免费的.org后缀的域名，但是一个GitHub绑定的账号免费版本的只能有两个域名",
-			"url": "https://dash.domain.digitalplat.org/auth/login",
 			"show": false
 		},
 		{
@@ -313,12 +313,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🔍 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "美国身份信息",
-			"subtitle": "其实啥身份都有",
-			"text": "好用但是不常用，而且自带邮箱只是需要注册登入（还没试过要不要钱）",
-			"url": "https://www.shenfendaquan.com/#google_vignette",
+			"go": "📝 前往",
+			"img": "/img/xmkp/yjym.jpg",
+			"title": "一级域名",
+			"subtitle": "2个免费的org域名",
+			"text": "可以获得免费的.org后缀的域名，但是一个GitHub绑定的账号免费版本的只能有两个域名",
+			"url": "https://dash.domain.digitalplat.org/auth/login",
 			"show": false
 		},
 		{
@@ -358,12 +358,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🚀 前往",
+			"go": "🔍 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "ITDOG",
-			"subtitle": "在线ping",
-			"text": "用于测试域名或者ip通讯与联通情况",
-			"url": "https://www.itdog.cn/",
+			"title": "美国身份信息",
+			"subtitle": "其实啥身份都有",
+			"text": "好用但是不常用，而且自带邮箱只是需要注册登入（还没试过要不要钱）",
+			"url": "https://www.shenfendaquan.com/#google_vignette",
 			"show": false
 		},
 		{
@@ -400,6 +400,15 @@ const config = {
 			"subtitle": "免费域名",
 			"text": "可以获取三个免费域名并代理",
 			"url": "https://my.dnshe.com/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "ITDOG",
+			"subtitle": "在线ping",
+			"text": "用于测试域名或者ip通讯与联通情况",
+			"url": "https://www.itdog.cn/",
 			"show": false
 		}
 	],
