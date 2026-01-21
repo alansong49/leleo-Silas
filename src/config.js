@@ -259,12 +259,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🗂️ 前往",
+			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "网盘",
-			"subtitle": "alan",
-			"text": "不知道用什么部署",
-			"url": "https://leleo.top",
+			"title": "实时新闻",
+			"subtitle": "Rss爬取新闻",
+			"text": "简单爬取总结新闻的网站",
+			"url": "https://newsnow.busiyi.world/",
 			"show": false
 		},
 		{
@@ -412,12 +412,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🚀 前往",
+			"go": "🗂️ 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "实时新闻",
-			"subtitle": "Rss爬取新闻",
-			"text": "简单爬取总结新闻的网站",
-			"url": "https://newsnow.busiyi.world/",
+			"title": "网盘",
+			"subtitle": "alan",
+			"text": "不知道用什么部署",
+			"url": "https://leleo.top",
 			"show": false
 		}
 	],
