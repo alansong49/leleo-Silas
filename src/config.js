@@ -410,6 +410,15 @@ const config = {
 			"text": "用于测试域名或者ip通讯与联通情况",
 			"url": "https://www.itdog.cn/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "实时新闻",
+			"subtitle": "Rss爬取新闻",
+			"text": "简单爬取总结新闻的网站",
+			"url": "https://newsnow.busiyi.world/",
+			"show": false
 		}
 	],
 	"statement": [
