@@ -277,12 +277,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🗃 前往",
-			"img": "/img/xmkp/Bilibili.jpg",
-			"title": "B站",
-			"subtitle": "不会就去B站，主打一个慢慢学",
-			"text": "不会就去B站搜",
-			"url": "https://www.bilibili.com/",
+			"go": "🗂️ 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "网盘",
+			"subtitle": "OpenList网盘",
+			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
+			"url": "https://alan--alansong49.replit.app",
 			"show": false
 		},
 		{
@@ -331,12 +331,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "精灵学院",
-			"subtitle": "购买梯子流量的网站",
-			"text": "目前发现最便宜的网站",
-			"url": "https://cfooo.riolu.ooo/",
+			"go": "🗃 前往",
+			"img": "/img/xmkp/Bilibili.jpg",
+			"title": "B站",
+			"subtitle": "不会就去B站，主打一个慢慢学",
+			"text": "不会就去B站搜",
+			"url": "https://www.bilibili.com/",
 			"show": false
 		},
 		{
@@ -412,12 +412,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🗂️ 前往",
+			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "网盘",
-			"subtitle": "alan",
-			"text": "不知道用什么部署",
-			"url": "https://ad30c545-25a3-4491-aa76-052ac0532dc7-00-zpdpq1990pm3.sisko.replit.dev/@login?redirect=%2F%40manage%2Fsettings%2Fglobal",
+			"title": "精灵学院",
+			"subtitle": "购买梯子流量的网站",
+			"text": "目前发现最便宜的网站",
+			"url": "https://cfooo.riolu.ooo/",
 			"show": false
 		},
 		{
