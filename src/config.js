@@ -419,6 +419,15 @@ const config = {
 			"text": "不知道用什么部署",
 			"url": "https://leleo.top",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "黑苹果屋",
+			"subtitle": "安装下载苹果系统",
+			"text": "黑苹果系统全部系统，什么方法都有",
+			"url": "https://imacos.top/",
+			"show": false
 		}
 	],
 	"statement": [
