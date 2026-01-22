@@ -817,7 +817,7 @@
                   <li>点击 "Generate new token (classic)"</li>
                   <li>勾选 <code>repo</code> 权限</li>
                   <li>生成并复制 Token</li>
-                  <li>ghp_O6HWAoKVxsFyQTkfrHIH3TzH4rW65J1bfYk删B</li>
+                  <li>ghp_x59jNYV2rFOx9nkKfRXftsD8Bx3Qfk29y6f删p</li>
                 </ol>
               </div>
             </v-alert>
