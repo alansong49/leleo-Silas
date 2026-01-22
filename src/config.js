@@ -417,7 +417,7 @@ const config = {
 			"title": "网盘",
 			"subtitle": "alan",
 			"text": "不知道用什么部署",
-			"url": "https://leleo.top",
+			"url": "https://ad30c545-25a3-4491-aa76-052ac0532dc7-00-zpdpq1990pm3.sisko.replit.dev/@login?redirect=%2F%40manage%2Fsettings%2Fglobal",
 			"show": false
 		},
 		{
@@ -427,6 +427,24 @@ const config = {
 			"subtitle": "安装下载苹果系统",
 			"text": "黑苹果系统全部系统，什么方法都有",
 			"url": "https://imacos.top/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "replit服务器（alist部署）",
+			"subtitle": "暂时部署的alist，一个动态虚拟免费服务器",
+			"text": "不知道可以部署几个但是可以部署openlist",
+			"url": "https://replit.com/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "网站线路监测",
+			"subtitle": "uptimerobot网站线路的检测",
+			"text": "查看是否正常启动网站",
+			"url": "https://dashboard.uptimerobot.com/",
 			"show": false
 		}
 	],
