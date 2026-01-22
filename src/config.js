@@ -455,6 +455,15 @@ const config = {
 			"text": "永久免费可以查找可以刷的机型",
 			"url": "https://mindows.cn/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "图床",
+			"subtitle": "免费储存照片的网站",
+			"text": "最大支持单次上传5mb的图片",
+			"url": "https://imgchr.com/",
+			"show": false
 		}
 	],
 	"statement": [
