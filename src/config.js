@@ -446,6 +446,15 @@ const config = {
 			"text": "查看是否正常启动网站",
 			"url": "https://dashboard.uptimerobot.com/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "mindows",
+			"subtitle": "手机平板刷windows系统的网站",
+			"text": "永久免费可以查找可以刷的机型",
+			"url": "https://mindows.cn/",
+			"show": false
 		}
 	],
 	"statement": [
