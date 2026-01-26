@@ -464,6 +464,15 @@ const config = {
 			"text": "最大支持单次上传5mb的图片",
 			"url": "https://imgchr.com/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "随机密码生成器",
+			"subtitle": "随机密码生成器",
+			"text": "随机生成密码",
+			"url": "https://www.avast.com/random-password-generator#pc",
+			"show": false
 		}
 	],
 	"statement": [
