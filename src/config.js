@@ -391,7 +391,7 @@ const config = {
 			"subtitle": "自己搭建",
 			"text": "一个博主研究的自己搭建免费梯子，部署很简单，全部是使用cf来进行部署的，并且给了免费域名获取的链接\n可免费注册的CNAME域名\nDNSHE：https://www.dnshe.com/ 部分域名可托管CF，邀请码：CY483A4A4B\nDigitalPlat: https://domain.digitalplat.org/ 部分域名可托管CF\nClouDNS：https://www.cloudns.net/index/lang/chs\ndynv6：https://dynv6.com/\nZoneABC：https://zoneabc.net/",
 			"url": "https://blog.cmliussss.com/p/edt2/#%F0%9F%9A%80-Edgetunnel2-0-%E5%85%A8%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%EF%BC%81-%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E6%96%B9%E4%BE%BF%EF%BC%81",
-			"show": false
+			"show": true
 		},
 		{
 			"go": "🚀 前往",
@@ -472,6 +472,15 @@ const config = {
 			"subtitle": "随机密码生成器",
 			"text": "随机生成密码",
 			"url": "https://www.avast.com/random-password-generator#pc",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "X黑手网",
+			"subtitle": "网络安全学习软件",
+			"text": "里面有大量的网络安全软件还有教程",
+			"url": "https://xheishou.com/",
 			"show": false
 		}
 	],
