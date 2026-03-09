@@ -282,7 +282,7 @@ const config = {
 			"title": "网盘",
 			"subtitle": "OpenList网盘",
 			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
-			"url": "https://alan--alansong49.replit.app",
+			"url": "https://ad30c545-25a3-4491-aa76-052ac0532dc7-00-zpdpq1990pm3.sisko.replit.dev/@login?redirect=%2F",
 			"show": false
 		},
 		{
@@ -391,7 +391,7 @@ const config = {
 			"subtitle": "自己搭建",
 			"text": "一个博主研究的自己搭建免费梯子，部署很简单，全部是使用cf来进行部署的，并且给了免费域名获取的链接\n可免费注册的CNAME域名\nDNSHE：https://www.dnshe.com/ 部分域名可托管CF，邀请码：CY483A4A4B\nDigitalPlat: https://domain.digitalplat.org/ 部分域名可托管CF\nClouDNS：https://www.cloudns.net/index/lang/chs\ndynv6：https://dynv6.com/\nZoneABC：https://zoneabc.net/",
 			"url": "https://blog.cmliussss.com/p/edt2/#%F0%9F%9A%80-Edgetunnel2-0-%E5%85%A8%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%EF%BC%81-%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E6%96%B9%E4%BE%BF%EF%BC%81",
-			"show": true
+			"show": false
 		},
 		{
 			"go": "🚀 前往",
