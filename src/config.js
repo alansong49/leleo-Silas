@@ -482,6 +482,15 @@ const config = {
 			"text": "里面有大量的网络安全软件还有教程",
 			"url": "https://xheishou.com/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "全球新闻",
+			"subtitle": "MONITOR",
+			"text": "GitHub开源项目，可以提取全球的内容，随时查看国际事件",
+			"url": "https://finance.worldmonitor.app/",
+			"show": false
 		}
 	],
 	"statement": [
