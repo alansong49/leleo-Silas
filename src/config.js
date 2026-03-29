@@ -283,7 +283,7 @@ const config = {
 			"subtitle": "OpenList网盘",
 			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
 			"url": "https://pan.moe/home?path=%2F",
-			"show": true
+			"show": false
 		},
 		{
 			"go": "🎨 前往",
