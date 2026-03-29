@@ -491,6 +491,15 @@ const config = {
 			"text": "GitHub开源项目，可以提取全球的内容，随时查看国际事件",
 			"url": "https://finance.worldmonitor.app/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "ChmlFrp",
+			"subtitle": "内网穿透",
+			"text": "内网穿透网站自带部署免费域名和ssl认证",
+			"url": "https://panel.chmlfrp.net/home",
+			"show": false
 		}
 	],
 	"statement": [
