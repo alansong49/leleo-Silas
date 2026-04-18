@@ -417,8 +417,8 @@ const config = {
 			"title": "精灵学院",
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
-			"url": "https://cfooo.riolu.ooo/",
-			"show": false
+			"url": "https://pub0.riolu.icu/",
+			"show": true
 		},
 		{
 			"go": "🚀 前往",
