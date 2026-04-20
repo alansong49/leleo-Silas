@@ -432,10 +432,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "replit服务器（alist部署）",
-			"subtitle": "暂时部署的alist，一个动态虚拟免费服务器",
-			"text": "不知道可以部署几个但是可以部署openlist",
-			"url": "https://replit.com/",
+			"title": "我的FnOS",
+			"subtitle": "我自己的服务器",
+			"text": "自己的服务器",
+			"url": "http://vip.xg.frp.one:38251/",
 			"show": false
 		},
 		{
@@ -499,6 +499,24 @@ const config = {
 			"subtitle": "内网穿透",
 			"text": "内网穿透网站自带部署免费域名和ssl认证",
 			"url": "https://panel.chmlfrp.net/home",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "replit服务器（alist部署）",
+			"subtitle": "暂时部署的alist，一个动态虚拟免费服务器",
+			"text": "不知道可以部署几个但是可以部署openlist",
+			"url": "https://replit.com/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "新疆幻城网安科技公益大模型api",
+			"subtitle": "新疆幻城网安科技公益大模型api",
+			"text": "免费api模型",
+			"url": "https://api.iamhc.cn/console",
 			"show": false
 		}
 	],
