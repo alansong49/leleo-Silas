@@ -418,7 +418,7 @@ const config = {
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
 			"url": "https://pub0.riolu.icu/",
-			"show": true
+			"show": false
 		},
 		{
 			"go": "🚀 前往",
@@ -517,6 +517,15 @@ const config = {
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
 			"url": "https://api.iamhc.cn/console",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "GNOME",
+			"subtitle": "用来修改ventoy的启动封面",
+			"text": "用来修改ventoy的启动封面，也可以修改linux启动封面",
+			"url": "https://www.gnome-look.org/browse/",
 			"show": false
 		}
 	],
