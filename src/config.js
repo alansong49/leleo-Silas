@@ -252,10 +252,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "edgetunnel 设置页面",
-			"subtitle": "我已经部署好的魔法",
-			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
-			"url": "https://proxy-eky.pages.dev/admin",
+			"title": "我的FnOS",
+			"subtitle": "我自己的服务器",
+			"text": "自己的服务器",
+			"url": "http://vip.xg.frp.one:38251/",
 			"show": false
 		},
 		{
@@ -418,7 +418,7 @@ const config = {
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
 			"url": "https://pub0.riolu.icu/",
-			"show": false
+			"show": true
 		},
 		{
 			"go": "🚀 前往",
@@ -432,10 +432,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "我的FnOS",
-			"subtitle": "我自己的服务器",
-			"text": "自己的服务器",
-			"url": "http://vip.xg.frp.one:38251/",
+			"title": "edgetunnel 设置页面",
+			"subtitle": "我已经部署好的魔法",
+			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
+			"url": "https://proxy-eky.pages.dev/admin",
 			"show": false
 		},
 		{
@@ -517,15 +517,6 @@ const config = {
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
 			"url": "https://api.iamhc.cn/console",
-			"show": false
-		},
-		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "GNOME",
-			"subtitle": "用来修改ventoy的启动封面",
-			"text": "用来修改ventoy的启动封面，也可以修改linux启动封面",
-			"url": "https://www.gnome-look.org/browse/",
 			"show": false
 		}
 	],
