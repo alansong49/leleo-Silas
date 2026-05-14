@@ -252,10 +252,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "我的FnOS",
-			"subtitle": "我自己的服务器",
-			"text": "自己的服务器",
-			"url": "http://vip.xg.frp.one:38251/",
+			"title": "edgetunnel 设置页面",
+			"subtitle": "我已经部署好的魔法",
+			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
+			"url": "https://proxy-eky.pages.dev/admin",
 			"show": false
 		},
 		{
@@ -418,7 +418,7 @@ const config = {
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
 			"url": "https://pub0.riolu.icu/",
-			"show": true
+			"show": false
 		},
 		{
 			"go": "🚀 前往",
@@ -432,10 +432,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "edgetunnel 设置页面",
-			"subtitle": "我已经部署好的魔法",
-			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
-			"url": "https://proxy-eky.pages.dev/admin",
+			"title": "我的FnOS",
+			"subtitle": "我自己的服务器",
+			"text": "自己的服务器",
+			"url": "http://vip.xg.frp.one:38251/",
 			"show": false
 		},
 		{
@@ -517,6 +517,24 @@ const config = {
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
 			"url": "https://api.iamhc.cn/console",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "国家超算互联网",
+			"subtitle": "国家超算互联网",
+			"text": "国家超算互联网，\n20/月，模型：MiniMax-M2.5、Qwen3-235B-A22B\n兼容OpenAI、Anthropic 协议(Anthropic仅支持MiniMax-M2.5)\n实例：OpenClaw 2核4G 实例免费使用\n用量：每月提供最多18000次请求额度，1200次/5小时 9000次/周 18000次/月",
+			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan?needBack=true",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "NOVM.NET",
+			"subtitle": "免费云服务器",
+			"text": "免费云服务器",
+			"url": "https://novm.net/",
 			"show": false
 		}
 	],
