@@ -522,19 +522,28 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "国家超算互联网",
-			"subtitle": "国家超算互联网",
-			"text": "国家超算互联网，\n20/月，模型：MiniMax-M2.5、Qwen3-235B-A22B\n兼容OpenAI、Anthropic 协议(Anthropic仅支持MiniMax-M2.5)\n实例：OpenClaw 2核4G 实例免费使用\n用量：每月提供最多18000次请求额度，1200次/5小时 9000次/周 18000次/月",
-			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan?needBack=true",
+			"title": "linuxmirrors",
+			"subtitle": "linuxmirrors",
+			"text": "linuxmirrors",
+			"url": "https://linuxmirrors.cn/use/",
 			"show": false
 		},
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "NOVM.NET",
-			"subtitle": "免费云服务器",
-			"text": "免费云服务器",
+			"title": "NOVM.NET INFRASTRUCTURE.",
+			"subtitle": "NOVM.NET INFRASTRUCTURE.",
+			"text": "免费服务器",
 			"url": "https://novm.net/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "国家超算互联网",
+			"subtitle": "国家超算互联网",
+			"text": "国家超算互联网，最低20tonker",
+			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan",
 			"show": false
 		}
 	],
