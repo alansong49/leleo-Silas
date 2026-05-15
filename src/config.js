@@ -527,6 +527,33 @@ const config = {
 			"text": "国家超算互联网；API购买",
 			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "linuxmirrors",
+			"subtitle": "linuxmirrors",
+			"text": "Linux系统镜像源",
+			"url": "https://linuxmirrors.cn/use/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "NOVM.NET",
+			"subtitle": "NOVM.NET",
+			"text": "免费云服务，扣除的费用是网络使用费用",
+			"url": "https://novm.net/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "clawhub",
+			"subtitle": "clawhub",
+			"text": "openclaw的技能网站",
+			"url": "https://clawhub.ai/",
+			"show": false
 		}
 	],
 	"statement": [
