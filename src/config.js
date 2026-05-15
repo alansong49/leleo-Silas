@@ -513,12 +513,12 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "新疆幻城网安科技公益大模型api",
+			"title": "新疆幻城网安科技公益大模型",
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
 			"url": "https://api.iamhc.cn/console",
 			"show": false
-		},
+		}
 	],
 	"statement": [
 		"备案号：萌ICP备20260017号",
