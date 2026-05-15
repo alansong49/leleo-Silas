@@ -418,7 +418,7 @@ const config = {
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
 			"url": "https://pub0.riolu.icu/",
-			"show": false
+			"show": true
 		},
 		{
 			"go": "🚀 前往",
@@ -520,30 +520,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "linuxmirrors",
-			"subtitle": "linuxmirrors",
-			"text": "linuxmirrors",
-			"url": "https://linuxmirrors.cn/use/",
-			"show": false
-		},
-		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "NOVM.NET INFRASTRUCTURE.",
-			"subtitle": "NOVM.NET INFRASTRUCTURE.",
-			"text": "免费服务器",
-			"url": "https://novm.net/",
-			"show": false
-		},
-		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "国家超算互联网",
-			"subtitle": "国家超算互联网",
-			"text": "国家超算互联网，最低20tonker",
-			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan",
+			"go": "111",
+			"img": "111",
+			"title": "111",
+			"subtitle": "111",
+			"text": "111",
+			"url": "111",
 			"show": false
 		}
 	],
