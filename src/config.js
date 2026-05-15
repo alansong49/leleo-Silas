@@ -513,10 +513,19 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "新疆幻城网安科技公益大模型",
+			"title": "新疆幻城网安科技公益大模型api",
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
 			"url": "https://api.iamhc.cn/console",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "国家超算互联网",
+			"subtitle": "国家超算互联网",
+			"text": "国家超算互联网；API购买",
+			"url": "https://www.scnet.cn/ui/console/index.html#/llm/coding-plan",
 			"show": false
 		}
 	],
