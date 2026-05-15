@@ -519,15 +519,6 @@ const config = {
 			"url": "https://api.iamhc.cn/console",
 			"show": false
 		},
-		{
-			"go": "111",
-			"img": "111",
-			"title": "111",
-			"subtitle": "111",
-			"text": "111",
-			"url": "111",
-			"show": false
-		}
 	],
 	"statement": [
 		"备案号：萌ICP备20260017号",
