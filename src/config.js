@@ -2,7 +2,7 @@ const config = {
 	"metaData": {
 		"title": "silas的个人主页🎉",
 		"description": "欢迎来到dc的奇妙世界！",
-		"keywords": "dc,个人主页,个人网站",
+		"keywords": "silas,个人主页,个人网站",
 		"icon": "/img/icon.png"
 	},
 	"avatar": "/img/alan.jpg",
