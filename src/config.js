@@ -1,12 +1,12 @@
 const config = {
 	"metaData": {
-		"title": "Silas的个人主页🎉",
-		"description": "欢迎来到Silas的奇妙世界！",
-		"keywords": "Silas,Silas,个人主页,个人网站",
+		"title": "dc的个人主页🎉",
+		"description": "欢迎来到dc的奇妙世界！",
+		"keywords": "dc,个人主页,个人网站",
 		"icon": "/img/icon.png"
 	},
 	"avatar": "/img/alan.jpg",
-	"welcometitle": "Hi, I'm Silas",
+	"welcometitle": "Hi, I'm dc",
 	"color": {
 		"themecolor": "#FFFFFF",
 		"welcometitlecolor": "#FFFFFF",
@@ -15,7 +15,7 @@ const config = {
 	},
 	"brightness": 85,
 	"blur": 5,
-	"adminPassword": "alan",
+	"adminPassword": "6634",
 	"tags": [
 		"乐观开朗",
 		"温柔体贴",
@@ -75,11 +75,11 @@ const config = {
 	"socialPlatformIcons": [
 		{
 			"icon": "mdi-github",
-			"link": "https://www.github.com/alansong49"
+			"link": "https://www.github.com/dc15706507-crypto"
 		},
 		{
 			"icon": "mdi-email",
-			"link": "2602753839@qq.com"
+			"link": ""
 		},
 		{
 			"icon": "mdi-qqchat",
@@ -208,17 +208,20 @@ const config = {
 			{
 				"title": "尼尔：机械纪元 团队",
 				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webm",
-				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.webm"
+				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.webm",
+				"loaded": true
 			},
 			{
 				"title": "向往航天的女孩",
 				"preview": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane-pre.webm",
-				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.webm"
+				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.webm",
+				"loaded": true
 			},
 			{
 				"title": "世界很温柔《龙族》上杉绘梨衣",
 				"preview": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85-pre.webm",
-				"url": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85.webm"
+				"url": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85.webm",
+				"loaded": true
 			}
 		],
 		"videoMobile": [
@@ -558,7 +561,7 @@ const config = {
 	],
 	"statement": [
 		"备案号：萌ICP备20260017号",
-		"Copyright © 2025 Silas"
+		"Copyright © 2025 dc"
 	]
 }
 
