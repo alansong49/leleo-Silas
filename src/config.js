@@ -1,12 +1,12 @@
 const config = {
 	"metaData": {
-		"title": "dc的个人主页🎉",
+		"title": "silas的个人主页🎉",
 		"description": "欢迎来到dc的奇妙世界！",
 		"keywords": "dc,个人主页,个人网站",
 		"icon": "/img/icon.png"
 	},
 	"avatar": "/img/alan.jpg",
-	"welcometitle": "Hi, I'm dc",
+	"welcometitle": "Hi, I'm silas",
 	"color": {
 		"themecolor": "#FFFFFF",
 		"welcometitlecolor": "#FFFFFF",
@@ -15,7 +15,7 @@ const config = {
 	},
 	"brightness": 85,
 	"blur": 5,
-	"adminPassword": "6634",
+	"adminPassword": "alan",
 	"tags": [
 		"乐观开朗",
 		"温柔体贴",
