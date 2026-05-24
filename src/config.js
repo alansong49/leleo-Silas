@@ -558,7 +558,7 @@ const config = {
 	],
 	"statement": [
 		"备案号：萌ICP备20260017号",
-		"Copyright © 2025 dc"
+		"Copyright © 2026 silas"
 	]
 }
 
