@@ -75,11 +75,11 @@ const config = {
 	"socialPlatformIcons": [
 		{
 			"icon": "mdi-github",
-			"link": "https://www.github.com/dc15706507-crypto"
+			"link": "https://www.github.com/alansong49"
 		},
 		{
 			"icon": "mdi-email",
-			"link": ""
+			"link": "2602753839@qq.com"
 		},
 		{
 			"icon": "mdi-qqchat",
