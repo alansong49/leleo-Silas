@@ -252,10 +252,10 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "edgetunnel 设置页面",
-			"subtitle": "我已经部署好的魔法",
-			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
-			"url": "https://proxy-eky.pages.dev/admin",
+			"title": "软仓",
+			"subtitle": "软仓",
+			"text": "非常多软件破解版下载",
+			"url": "https://www.ruancang.net/",
 			"show": false
 		},
 		{
@@ -553,6 +553,15 @@ const config = {
 			"subtitle": "clawhub",
 			"text": "openclaw的技能网站",
 			"url": "https://clawhub.ai/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "edgetunnel 设置页面",
+			"subtitle": "我已经部署好的魔法",
+			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
+			"url": "https://proxy-eky.pages.dev/admin",
 			"show": false
 		}
 	],
