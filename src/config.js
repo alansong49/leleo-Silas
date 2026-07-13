@@ -572,6 +572,42 @@ const config = {
 			"text": "所有电脑刷机后可以开荒使用，集合了很多软件",
 			"url": "https://www.cyhaoka.vip/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "vulhub",
+			"subtitle": "vulhub",
+			"text": "Vulhub是一个面向安全研究人员和教育工作者的开源预构建漏洞Docker环境集合。",
+			"url": "https://vulhub.org/zh",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "攻防世界",
+			"subtitle": "攻防世界",
+			"text": "网络安全课程与比赛报名网站",
+			"url": "https://adworld.xctf.org.cn/home",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "安全KBR",
+			"subtitle": "安全KBR",
+			"text": "关于网络安全的文档",
+			"url": "https://www.anquanke.com/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "ISC.AI",
+			"subtitle": "ISC.AI",
+			"text": "网络安全学院",
+			"url": "https://isc.360.com/new/",
+			"show": false
 		}
 	],
 	"statement": [
