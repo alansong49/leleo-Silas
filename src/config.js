@@ -251,7 +251,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784279077312_20250428035000_cang-yuan-512.png",
 			"title": "软仓",
 			"subtitle": "软仓",
 			"text": "非常多软件破解版下载",
@@ -260,7 +260,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784279077335_pwa-512x512.png",
 			"title": "实时新闻",
 			"subtitle": "Rss爬取新闻",
 			"text": "简单爬取总结新闻的网站",
@@ -278,7 +278,7 @@ const config = {
 		},
 		{
 			"go": "🗂️ 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784279075140_logo192.png",
 			"title": "网盘",
 			"subtitle": "OpenList网盘",
 			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
@@ -368,7 +368,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784279077632_726b5985-82b5-4da2-a9c7-255971007a40.png",
 			"title": "infinityfree",
 			"subtitle": "免费域名和服务器",
 			"text": "不知道好不好用，但是可以申请免费的服务器和域名",
@@ -377,7 +377,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784279084558_favicon-32x32.png",
 			"title": "稀土掘金",
 			"subtitle": "程序员必备网站",
 			"text": "跟csdn差不多但是没那么坑",
