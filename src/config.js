@@ -395,7 +395,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784280581289_logo_2023.png",
 			"title": "ITDOG",
 			"subtitle": "在线ping",
 			"text": "用于测试域名或者ip通讯与联通情况",
@@ -404,7 +404,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784280580451_favicon-32x32__1_.png",
 			"title": "精灵学院",
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
@@ -422,7 +422,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "https://tc.silas.cc.cd/file/log/1784280948484_141418-690453ba57e16.jpg",
 			"title": "我的FnOS",
 			"subtitle": "我自己的服务器",
 			"text": "自己的服务器",
