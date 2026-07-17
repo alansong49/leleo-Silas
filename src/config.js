@@ -642,7 +642,7 @@ const config = {
 			"title": "我的图床",
 			"subtitle": "我的图床",
 			"text": "我的图床，自己的图床没有内存限制",
-			"url": "tc.silas.cc.cd",
+			"url": "https://tc.silas.cc.cd/",
 			"show": false
 		}
 	],
