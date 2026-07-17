@@ -608,6 +608,24 @@ const config = {
 			"text": "网络安全学院",
 			"url": "https://isc.360.com/new/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "Discord",
+			"subtitle": "Discord",
+			"text": "discord类似kook和oopz，但是可以制作app和bot",
+			"url": "https://discord.com/channels/@me",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "huggingface",
+			"subtitle": "huggingface",
+			"text": "huggingface 黄脸书",
+			"url": "https://huggingface.co/settings/tokens",
+			"show": false
 		}
 	],
 	"statement": [
