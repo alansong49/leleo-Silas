@@ -599,6 +599,15 @@ const config = {
 			"text": "网络安全学院",
 			"url": "https://isc.360.com/new/",
 			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "https://tc.silas.cc.cd/file/log/1784272035351_图床网站图标与Logo设计.png",
+			"title": "我的图床",
+			"subtitle": "我的图床",
+			"text": "我自己的图床不会限制大小",
+			"url": "https://tc.silas.cc.cd/",
+			"show": false
 		}
 	],
 	"statement": [
