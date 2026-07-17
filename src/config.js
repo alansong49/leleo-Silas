@@ -251,7 +251,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279077312_20250428035000_cang-yuan-512.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "软仓",
 			"subtitle": "软仓",
 			"text": "非常多软件破解版下载",
@@ -260,7 +260,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279077335_pwa-512x512.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "实时新闻",
 			"subtitle": "Rss爬取新闻",
 			"text": "简单爬取总结新闻的网站",
@@ -278,7 +278,7 @@ const config = {
 		},
 		{
 			"go": "🗂️ 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279075140_logo192.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "网盘",
 			"subtitle": "OpenList网盘",
 			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
@@ -368,7 +368,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279077632_726b5985-82b5-4da2-a9c7-255971007a40.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "infinityfree",
 			"subtitle": "免费域名和服务器",
 			"text": "不知道好不好用，但是可以申请免费的服务器和域名",
@@ -377,11 +377,20 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279084558_favicon-32x32.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "稀土掘金",
 			"subtitle": "程序员必备网站",
 			"text": "跟csdn差不多但是没那么坑",
 			"url": "https://juejin.cn/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "免费梯子部署方法",
+			"subtitle": "自己搭建",
+			"text": "一个博主研究的自己搭建免费梯子，部署很简单，全部是使用cf来进行部署的，并且给了免费域名获取的链接\n可免费注册的CNAME域名\nDNSHE：https://www.dnshe.com/ 部分域名可托管CF，邀请码：CY483A4A4B\nDigitalPlat: https://domain.digitalplat.org/ 部分域名可托管CF\nClouDNS：https://www.cloudns.net/index/lang/chs\ndynv6：https://dynv6.com/\nZoneABC：https://zoneabc.net/",
+			"url": "https://blog.cmliussss.com/p/edt2/#%F0%9F%9A%80-Edgetunnel2-0-%E5%85%A8%E6%96%B0%E7%89%88%E6%9C%AC%EF%BC%8C%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%EF%BC%81-%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E6%96%B9%E4%BE%BF%EF%BC%81",
 			"show": false
 		},
 		{
@@ -395,7 +404,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784280581289_logo_2023.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "ITDOG",
 			"subtitle": "在线ping",
 			"text": "用于测试域名或者ip通讯与联通情况",
@@ -404,12 +413,12 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784280580451_favicon-32x32__1_.png",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "精灵学院",
 			"subtitle": "购买梯子流量的网站",
 			"text": "目前发现最便宜的网站",
 			"url": "https://pub0.riolu.icu/",
-			"show": false
+			"show": true
 		},
 		{
 			"go": "🚀 前往",
@@ -422,7 +431,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784280948484_141418-690453ba57e16.jpg",
+			"img": "/img/xmkp/sunshine.jpg",
 			"title": "我的FnOS",
 			"subtitle": "我自己的服务器",
 			"text": "自己的服务器",
@@ -602,11 +611,29 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784272035351_图床网站图标与Logo设计.png",
-			"title": "我的图床",
-			"subtitle": "我的图床",
-			"text": "我自己的图床不会限制大小",
-			"url": "https://tc.silas.cc.cd/",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "二次元图片壁纸",
+			"subtitle": "konachan",
+			"text": "二次元图片壁纸konachan",
+			"url": "https://konachan.net/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "discord",
+			"subtitle": "bot和app制作包括服务器",
+			"text": "类似与kook和oopz的内容，但是包括Bot，软件和服务器的部署",
+			"url": "https://discord.com/channels/@me",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "huggingface",
+			"subtitle": "huggingface",
+			"text": "小黄书，部署bot",
+			"url": "https://huggingface.co/",
 			"show": false
 		}
 	],
