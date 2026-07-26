@@ -60,6 +60,11 @@ export default {
       editingIcpUrl: 'https://icp.gov.moe/?keyword=20260017',
       icpText: '萌ICP备20260017号',
       icpUrl: 'https://icp.gov.moe/?keyword=20260017',
+      imageBedEditDialog: false,
+      editingImageBedName: '图床',
+      editingImageBedUrl: 'https://imgchr.com/',
+      imageBedName: '图床',
+      imageBedUrl: 'https://imgchr.com/',
       addProjectDialog: false,
       editingProjectIndex: null,
       newProject: {
@@ -132,6 +137,14 @@ export default {
       // 如果configdata中没有icp字段，使用默认值
       this.icpText = '萌ICP备20260017号';
       this.icpUrl = 'https://icp.gov.moe/?keyword=20260017';
+    }
+    // 初始化图床信息
+    if (this.configdata.imageBed) {
+      this.imageBedName = this.configdata.imageBed.name || '图床';
+      this.imageBedUrl = this.configdata.imageBed.url || 'https://imgchr.com/';
+    } else {
+      this.imageBedName = '图床';
+      this.imageBedUrl = 'https://imgchr.com/';
     }
     this.isloading = true;
     let imageurl = "";
@@ -962,6 +975,47 @@ export default {
       this.configdata.icp.url = this.icpUrl;
 
       this.closeIcpEditDialog();
+      this.showSaveSuccessDialog();
+    },
+    openImageBedEditDialog() {
+      if (!this.isAdminMode) {
+        this.showAdminModeRequired();
+        return;
+      }
+      this.editingImageBedName = this.imageBedName;
+      this.editingImageBedUrl = this.imageBedUrl;
+      this.imageBedEditDialog = true;
+    },
+    closeImageBedEditDialog() {
+      this.imageBedEditDialog = false;
+      this.editingImageBedName = '';
+      this.editingImageBedUrl = '';
+    },
+    saveImageBed() {
+      if (!this.isAdminMode) {
+        this.showAdminModeRequired();
+        return;
+      }
+      
+      if (!this.editingImageBedName || !this.editingImageBedName.trim()) {
+        alert('请输入图床名称');
+        return;
+      }
+      if (!this.editingImageBedUrl || !this.editingImageBedUrl.trim()) {
+        alert('请输入图床链接');
+        return;
+      }
+
+      this.imageBedName = this.editingImageBedName.trim();
+      this.imageBedUrl = this.editingImageBedUrl.trim();
+      
+      if (!this.configdata.imageBed) {
+        this.configdata.imageBed = {};
+      }
+      this.configdata.imageBed.name = this.imageBedName;
+      this.configdata.imageBed.url = this.imageBedUrl;
+
+      this.closeImageBedEditDialog();
       this.showSaveSuccessDialog();
     },
   }

@@ -174,13 +174,15 @@
             <v-col cols="12" md="8" lg="9" style="height: 100vh;" :style="xs||sm ?{}:{'overflow': 'auto'}">
                 <homeright :configdata=configdata :formattedTime=formattedTime 
                 :formattedDate=formattedDate :projectcards=projectcards :isAdminMode=isAdminMode
+                :imageBedUrl=imageBedUrl :imageBedName=imageBedName
                 @open-add-project-dialog="openAddProjectDialog"
                 @open-edit-project-dialog="openEditProjectDialog"
                 @open-admin-password-dialog="openAdminPasswordDialog"
                 @show-admin-mode-required="showAdminModeRequired"
                 @delete-project="handleDeleteProject"
                 @open-typewriter-edit-dialog="openTypewriterEditDialog"
-                @swap-project-cards="handleSwapProjectCards"></homeright>
+                @swap-project-cards="handleSwapProjectCards"
+                @open-imagebed-edit-dialog="openImageBedEditDialog"></homeright>
             </v-col>
         </v-row>
     </div>
@@ -1098,6 +1100,76 @@
             @click.prevent="saveIcp"
             class="save-btn"
             :disabled="!editingIcpText || !editingIcpUrl"
+          >
+            <v-icon start>mdi-content-save</v-icon>
+            保存
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <!-- 编辑图床对话框 -->
+    <v-dialog v-model="imageBedEditDialog" max-width="500px" class="imagebed-edit-dialog" persistent>
+      <v-card class="imagebed-edit-card" variant="tonal">
+        <v-card-title class="imagebed-edit-title">
+          <v-icon class="mr-2">mdi-image-plus</v-icon>
+          <span>编辑图床</span>
+          <v-spacer></v-spacer>
+          <v-btn
+            icon
+            size="small"
+            variant="text"
+            @click="closeImageBedEditDialog"
+            class="close-btn"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+
+        <v-divider class="imagebed-edit-divider"></v-divider>
+
+        <v-card-text class="imagebed-edit-content">
+          <v-form ref="imageBedEditForm" @submit.prevent="saveImageBed">
+            <v-text-field
+              v-model="editingImageBedName"
+              label="图床名称"
+              density="compact"
+              variant="outlined"
+              class="mb-3"
+              :rules="[v => !!v || '请输入图床名称']"
+              @keyup.enter="saveImageBed"
+            ></v-text-field>
+
+            <v-text-field
+              v-model="editingImageBedUrl"
+              label="图床链接"
+              density="compact"
+              variant="outlined"
+              class="mb-3"
+              :rules="[v => !!v || '请输入图床链接']"
+              @keyup.enter="saveImageBed"
+            ></v-text-field>
+          </v-form>
+        </v-card-text>
+
+        <v-divider class="imagebed-edit-divider"></v-divider>
+
+        <v-card-actions class="imagebed-edit-actions">
+          <v-spacer></v-spacer>
+          <v-btn
+            variant="text"
+            @click="closeImageBedEditDialog"
+            class="cancel-btn"
+          >
+            取消
+          </v-btn>
+          <v-btn
+            type="button"
+            color="primary"
+            variant="tonal"
+            @click.prevent="saveImageBed"
+            class="save-btn"
+            :disabled="!editingImageBedName || !editingImageBedUrl"
           >
             <v-icon start>mdi-content-save</v-icon>
             保存

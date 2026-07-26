@@ -55,6 +55,17 @@
                 >
                   <template v-slot:title >
                     <span class="leleo-card-title clock-font">{{formattedTime}}</span>
+                    <v-btn 
+                      class="ml-2"
+                      :size="xs||sm?20:24"
+                      icon
+                      variant="text"
+                      @click="jumpToImageBed"
+                      @dblclick.stop.prevent="handleImageBedEditClick"
+                      :title="imageBedName"
+                    >
+                      <v-icon>mdi-image-plus</v-icon>
+                    </v-btn>
                   </template>
                   <template v-slot:subtitle>
                     <span style="font-weight: bold;">{{formattedDate}}</span>
@@ -164,7 +175,7 @@ export default {
     components: {
         typewriter,turntable
     },
-    props: ['configdata','formattedTime','formattedDate','projectcards','isAdminMode'],
+    props: ['configdata','formattedTime','formattedDate','projectcards','isAdminMode','imageBedUrl','imageBedName'],
 	data() {
 		return {
 			searchQuery: '',
@@ -243,6 +254,16 @@ export default {
       handleAddProjectClick() {
         if (this.isAdminMode) {
           this.$emit('open-add-project-dialog');
+        } else {
+          this.$emit('show-admin-mode-required');
+        }
+      },
+      jumpToImageBed() {
+        window.open(this.imageBedUrl, '_blank').focus();
+      },
+      handleImageBedEditClick() {
+        if (this.isAdminMode) {
+          this.$emit('open-imagebed-edit-dialog');
         } else {
           this.$emit('show-admin-mode-required');
         }
