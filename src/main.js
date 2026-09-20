@@ -1,31 +1,30 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// Vuetify（vite-plugin-vuetify 会自动按需引入组件样式，无需手动 import *）
+// Vuetify
+import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import { aliases } from 'vuetify/iconsets/mdi-svg'
-import { iconAliases, mdiIconSet } from './icons'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+import '@mdi/font/css/materialdesignicons.css'
+
 
 const vuetify = createVuetify({
-  icons: {
-    defaultSet: 'mdi',
-    aliases: {
-      ...aliases,
-      ...iconAliases,
+    components,
+    directives,
+    icons: {
+        defaultSet: 'mdi', // 这已经是默认值-仅用于显示目的 
     },
-    sets: {
-      mdi: mdiIconSet,
+    defaults: {
+        VCard: {
+            variant: 'tonal',
+        },
     },
-  },
-  defaults: {
-    VCard: {
-      variant: 'tonal',
-    },
-  },
 })
 const app = createApp(App);
 // 仅在生产环境静默警告，开发环境保留以方便调试
 if (import.meta.env.PROD) {
-  app.config.warnHandler = () => {};
+    app.config.warnHandler = () => {};
 }
 app.use(vuetify).mount('#app')
+
