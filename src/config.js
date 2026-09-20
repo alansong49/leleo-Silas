@@ -15,9 +15,6 @@ const config = {
 	},
 	"brightness": 85,
 	"blur": 5,
-	// 注意：纯前端应用的管理员密码无法做到真正安全，任何查看源码的人都能获取。
-	// 建议通过环境变量 VITE_ADMIN_PASSWORD 设置密码（优先级高于此处配置），
-	// 并在部署平台（Vercel/CloudFlare）的环境变量中配置，避免随源码提交。
 	"adminPassword": "alan",
 	"tags": [
 		"乐观开朗",
@@ -646,6 +643,15 @@ const config = {
 			"subtitle": "我的图床",
 			"text": "我的图床，自己的图床没有内存限制",
 			"url": "https://tc.silas.cc.cd/",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
+			"subtitle": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
+			"text": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
+			"url": "https://jwxt.zhcpt.edu.cn/studentportal.php",
 			"show": false
 		}
 	],
