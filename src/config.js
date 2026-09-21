@@ -277,12 +277,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🗂️ 前往",
-			"img": "https://tc.silas.cc.cd/file/log/1784279075140_logo192.png",
-			"title": "网盘",
-			"subtitle": "OpenList网盘",
-			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
-			"url": "https://pan.moe/home?path=%2F",
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "我的图床",
+			"subtitle": "我的图床",
+			"text": "我的图床",
+			"url": "https://tc.silas.cc.cd/",
 			"show": false
 		},
 		{
@@ -394,12 +394,12 @@ const config = {
 			"show": false
 		},
 		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
-			"title": "DNSHE免费域名管理平台",
-			"subtitle": "免费域名",
-			"text": "可以获取三个免费域名并代理",
-			"url": "https://my.dnshe.com/",
+			"go": "🗂️ 前往",
+			"img": "https://tc.silas.cc.cd/file/log/1784279075140_logo192.png",
+			"title": "网盘",
+			"subtitle": "OpenList网盘",
+			"text": "现在使用replit部署openlist网站，进行文件储存中转，使用自搭建的服务器做内网穿透上公网；openlist来代理使其变成公网服务器网盘（openlist可以代理所有市面上的网盘）",
+			"url": "https://pan.moe/home?path=%2F",
 			"show": false
 		},
 		{
@@ -459,7 +459,7 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "图床",
+			"title": "第三方图床",
 			"subtitle": "免费储存照片的网站",
 			"text": "最大支持单次上传5mb的图片",
 			"url": "https://imgchr.com/",
@@ -652,6 +652,15 @@ const config = {
 			"subtitle": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
 			"text": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
 			"url": "https://jwxt.zhcpt.edu.cn/studentportal.php",
+			"show": false
+		},
+		{
+			"go": "🚀 前往",
+			"img": "/img/xmkp/sunshine.jpg",
+			"title": "DNSHE免费域名管理平台",
+			"subtitle": "免费域名",
+			"text": "可以获取三个免费域名并代理",
+			"url": "https://my.dnshe.com/",
 			"show": false
 		}
 	],
