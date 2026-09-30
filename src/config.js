@@ -558,15 +558,6 @@ const config = {
 		{
 			"go": "🚀 前往",
 			"img": "/img/xmkp/sunshine.jpg",
-			"title": "edgetunnel 设置页面",
-			"subtitle": "我已经部署好的魔法",
-			"text": "还可以使用起来还算是好用，跟花钱的差不多，就是可用数量少",
-			"url": "https://proxy-eky.pages.dev/admin",
-			"show": false
-		},
-		{
-			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
 			"title": "电脑开荒网",
 			"subtitle": "电脑开荒网",
 			"text": "所有电脑刷机后可以开荒使用，集合了很多软件",
