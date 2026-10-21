@@ -81,6 +81,7 @@ export default {
         show: false
       },
       personalizedtags: null,
+      videoAutoplay: false,
       videosrc: '',
       ismusicplayer: false,
       isPlaying:false,
@@ -185,13 +186,15 @@ export default {
               img.onerror = () => {resolve();};
               setTimeout(resolve, 1500); // 背景图也必须有超时兜底
             }else{
-              const video = this.$refs.VdPlayer;
-              if (!video) { resolve(); return; }
-              if (video.readyState >= 1) { resolve(); return; }
-              const done = () => resolve();
-              video.addEventListener('loadedmetadata', done, { once: true });
-              video.addEventListener('error', done, { once: true });
-              setTimeout(done, 1200); // 视频元数据最多等 1.2s，先让页面可见
+              // 视频背景改为页面可用后再加载：这里只等首帧封面图（十几 KB），
+              // 不再为了背景视频压住首屏，也不再首屏下载整段 mp4
+              const poster = this.videoposter;
+              if (!poster) { resolve(); return; }
+              const img = new Image();
+              img.src = poster;
+              img.onload = () => resolve();
+              img.onerror = () => resolve();
+              setTimeout(resolve, 800);
             }
           })
         });
@@ -203,6 +206,21 @@ export default {
         setTimeout(() => {
           this.isloading = false;
         }, 150);
+        // 首屏可见之后再拉背景视频，避免和 JS/CSS 抢首屏带宽
+        const startBgVideo = () => {
+          if (this.videoAutoplay || !this.videosrc) return;
+          this.videoAutoplay = true;
+          this.$nextTick(() => {
+            const v = this.$refs.VdPlayer;
+            if (!v) return;
+            try { v.load(); v.play().catch(() => {}); } catch (e) { /* 自动播放被拒则保留封面 */ }
+          });
+        };
+        if (window.requestIdleCallback) {
+          window.requestIdleCallback(startBgVideo, { timeout: 1500 });
+        } else {
+          setTimeout(startBgVideo, 600);
+        }
       }).catch((err) => {
         console.error('壁纸加载失败:', err);
         setTimeout(() => {
