@@ -9,3 +9,6 @@ dist/
 *.swp
 *.swo
 *~
+
+# 本地保留的原始素材（未压缩的 png/jpg/webm 源文件，仅供重新生成用）
+_src-backup/

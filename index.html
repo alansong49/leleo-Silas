@@ -1,18 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="description" content="欢迎来到Leleo的奇妙世界！">
     <meta name="keywords" content="Leleo,leleo,个人主页,个人网站">
+    <meta name="theme-color" content="#282c34">
+    <link rel="icon" href="/img/icon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     <title>个人主页</title>
+
+    <!-- 首屏关键资源预加载：字体 + 头像 + 背景图/视频封面 -->
+    <link rel="preload" href="/fonts/mdi-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/img/alan.webp" as="image" type="image/webp">
+    <link rel="preload" href="/img/wallpaper/static-mobile/0001/image.webp" as="image" type="image/webp" media="(max-width: 600px)">
+    <link rel="preload" href="/img/wallpaper/dynamic/%E5%90%91%E5%BE%80%E8%88%AA%E5%A4%A9%E7%9A%84%E5%A5%B3%E5%AD%A9/Toy-Aeroplane-poster.webp" as="image" type="image/webp" media="(min-width: 601px)">
+
+    <!-- 关键样式内联，省掉一次阻塞请求 -->
+    <style>
+      @font-face{font-family:"myfont";src:url("/fonts/faken.ttf");font-display:swap}
+      @font-face{font-family:"digitalfont";src:url("/fonts/Digital-Play-Italic-St-1.ttf");font-display:swap}
+      html,body{margin:0;background-color:#282c34}
+      #app{min-height:100vh}
+      ::-webkit-scrollbar{width:0px}
+    </style>
   </head>
   <body>
     <div id="app"></div>

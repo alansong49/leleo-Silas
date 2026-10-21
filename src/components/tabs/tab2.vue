@@ -318,9 +318,6 @@ export default {
 }
 </script>
 <style scoped>
-@import url(/css/mobile.less);
-</style>
-<style scoped>
 video{
     pointer-events: none;
     border-radius: 0.5rem;

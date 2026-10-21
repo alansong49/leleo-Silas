@@ -1,15 +1,19 @@
+import { defineAsyncComponent } from 'vue';
 import homeright from '../src/components/hoemright.vue';
 import typewriter from './components/typewriter.vue';
-import tab1 from './components/tabs/tab1.vue';
-import tab2 from './components/tabs/tab2.vue';
-import tab3 from './components/tabs/tab3.vue';
 import loader from './components/loader.vue';
-import polarchart from './components/polarchart.vue';
 import config from './config.js';
 import { getCookie } from './utils/cookieUtils.js';
 import { setMeta,getFormattedTime,getFormattedDate,dataConsole } from './utils/common.js';
 import { commitConfigToGitHub } from './utils/githubApi.js';
 import { useDisplay } from 'vuetify'
+
+// 弹窗里的三个 Tab 与图表组件都不是首屏关键路径，改为按需异步加载，
+// 首屏 JS 只下载骨架，点开对应弹窗时才拉取分块。
+const tab1 = defineAsyncComponent(() => import('./components/tabs/tab1.vue'));
+const tab2 = defineAsyncComponent(() => import('./components/tabs/tab2.vue'));
+const tab3 = defineAsyncComponent(() => import('./components/tabs/tab3.vue'));
+const polarchart = defineAsyncComponent(() => import('./components/polarchart.vue'));
 
 export default {
   components: {
@@ -155,45 +159,39 @@ export default {
     
     imageurl = this.setMainProperty(imageurl);
 
-    //异步等待背景壁纸包括视频壁纸加载完成后再显示页面
+    // 首屏只等真正的关键资源：头像 + 背景（图片或视频元数据）。
+    // 原来会把 20 多张项目卡片图（含第三方图床）全部等到加载完，并且视频没有超时兜底，
+    // 弱网下页面会一直卡在 loader 上。
     const loadImage = () => {
-        const imageUrls = [
-          this.configdata.avatar,
-          ...(this.configdata.projectcards || []).map(item => item.img)
-        ];
-        return new Promise((resolve, reject) => {
+        const imageUrls = [this.configdata.avatar].filter(Boolean);
+        return new Promise((resolve) => {
           const imagePromises = imageUrls.map((url) => {
-            return new Promise((resolve, reject) => {
+            return new Promise((res) => {
                 const imgs = new Image();
                 imgs.src = url;
-                imgs.onload = () => resolve();
-                imgs.onerror = (err) => reject(err);
+                imgs.onload = () => res();
+                imgs.onerror = () => res();
             });
-          })
-
-          // 设置超时机制：2.5秒
-          const timeoutPromise = new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-            }, 2500);
           });
-          
-          // 等待所有图片加载完成或超时
+
+          // 头像最多等 800ms
+          const timeoutPromise = new Promise((res) => setTimeout(res, 800));
+
           Promise.race([Promise.all(imagePromises), timeoutPromise]).then(()=>{
             if(imageurl){
               const img = new Image();
               img.src = imageurl;
-              // resolve() 函数通将一个 Promise 对象从未完成状态转变为已完成状态
               img.onload = () => {resolve();};
-              img.onerror = (err) => {reject(err);};
+              img.onerror = () => {resolve();};
+              setTimeout(resolve, 1500); // 背景图也必须有超时兜底
             }else{
               const video = this.$refs.VdPlayer;
-              video.onloadedmetadata = () => {
-                setTimeout(() => {
-                }, 200);  
-                resolve();
-              };
-              video.onerror = () => {resolve();};
+              if (!video) { resolve(); return; }
+              if (video.readyState >= 1) { resolve(); return; }
+              const done = () => resolve();
+              video.addEventListener('loadedmetadata', done, { once: true });
+              video.addEventListener('error', done, { once: true });
+              setTimeout(done, 1200); // 视频元数据最多等 1.2s，先让页面可见
             }
           })
         });
@@ -204,7 +202,7 @@ export default {
         this.formattedDate =  this.getFormattedDate(new Date());
         setTimeout(() => {
           this.isloading = false;
-        }, 500);          
+        }, 150);
       }).catch((err) => {
         console.error('壁纸加载失败:', err);
         setTimeout(() => {
@@ -267,6 +265,11 @@ export default {
     },
     audioPlayer() {
       return this.$refs.audioPlayer;
+    },
+    // 视频背景首帧封面：首屏先画封面，视频边下边播，避免白屏等待
+    videoposter() {
+      if (!this.videosrc) return '';
+      return this.videosrc.replace(/\.(mp4|webm)$/i, '-poster.webp');
     }
   },
   
