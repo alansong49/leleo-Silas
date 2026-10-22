@@ -7,7 +7,6 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "icons:subset": "python scripts/make-mdi-subset.py",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

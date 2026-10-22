@@ -350,6 +350,8 @@ export default {
 </script>
 
 <style scoped>
+@import url(/css/app.less);
+@import url(/css/mobile.less);
 .glass-list {
 	background: transparent !important;
 	backdrop-filter: blur(var(--leleo-blur));

@@ -146,14 +146,3 @@ npm run dev
 
 > (3). 点击"部署"，找到左侧带绿条的那个点击右侧三个点"重试部署" 等待部署完成即可
 ![重试部署](./img/leleo-home-page/IMG_20250813_131021.jpg)
-
-## 加载性能优化（首屏）
-
-项目已做过一轮首屏优化，改动集中在构建配置、资源体积和首屏等待逻辑三处，改配置时注意别回退：
-
-- **Vuetify 按需引入**：`vite.config.js` 使用 `vite-plugin-vuetify`（`autoImport` + `styles.configFile: src/settings.scss`），不要再改回 `import * as components` 的全量注册方式。
-- **MDI 图标子集**：`src/styles/mdi.css` + `public/fonts/mdi-subset.woff2` 由 `python scripts/make-mdi-subset.py` 生成，只包含站点实际用到的图标（约 5KB）。**新增图标后必须重新生成**，否则新图标会显示成空方块。
-- **图片/视频**：`public/img` 内位图已换成 webp（头像 480px、卡片图 640px、壁纸按 PC 1920 / 移动 828 宽），动态壁纸重编码为 mp4 + `-poster.webp` 首帧封面；原始素材留在本地 `_src-backup/`（已 gitignore）。
-- **首屏等待**：`src/app.js` 的 `loadImage()` 只等头像和背景，且都有超时兜底；项目卡片图不再阻塞渲染。
-- **懒加载**：`tab1/tab2/tab3`、`polarchart` 用 `defineAsyncComponent`，弹窗打开时才拉取分块。
-- **缓存头**：`vercel.json` 对 `/assets` 设长缓存 immutable，`/img`、`/fonts` 设一周缓存，HTML 不强缓存。
