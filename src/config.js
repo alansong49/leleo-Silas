@@ -3,9 +3,9 @@ const config = {
 		"title": "silas的个人主页🎉",
 		"description": "欢迎来到dc的奇妙世界！",
 		"keywords": "silas,个人主页,个人网站",
-		"icon": "/img/icon.png"
+		"icon": "/img/icon-32.png"
 	},
-	"avatar": "/img/alan.jpg",
+	"avatar": "/img/alan.webp",
 	"welcometitle": "Hi, I'm silas",
 	"color": {
 		"themecolor": "#FFFFFF",
@@ -31,8 +31,8 @@ const config = {
 			"type": "video",
 			"datainfo": {
 				"title": "向往航天的女孩",
-				"preview": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane-pre.webm",
-				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.webm"
+				"preview": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane-pre.mp4",
+				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.mp4"
 			}
 		},
 		"mobile": {
@@ -40,7 +40,7 @@ const config = {
 			"datainfo": {
 				"title": "0001",
 				"preview": "/img/wallpaper/static-mobile/0001/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0001/image.png"
+				"url": "/img/wallpaper/static-mobile/0001/image.webp"
 			}
 		}
 	},
@@ -114,17 +114,17 @@ const config = {
 			{
 				"title": "海洋女孩",
 				"preview": "/img/wallpaper/static/海洋女孩/image-pre.webp",
-				"url": "/img/wallpaper/static/海洋女孩/image.png"
+				"url": "/img/wallpaper/static/海洋女孩/image.webp"
 			},
 			{
 				"title": "书房夜晚",
 				"preview": "/img/wallpaper/static/书房夜晚/image-pre.webp",
-				"url": "/img/wallpaper/static/书房夜晚/image.png"
+				"url": "/img/wallpaper/static/书房夜晚/image.webp"
 			},
 			{
 				"title": "安逸舒适",
 				"preview": "/img/wallpaper/static/安逸舒适/image-pre.webp",
-				"url": "/img/wallpaper/static/安逸舒适/image.png"
+				"url": "/img/wallpaper/static/安逸舒适/image.webp"
 			},
 			{
 				"title": "jswcMaMj",
@@ -171,22 +171,22 @@ const config = {
 			{
 				"title": "0001",
 				"preview": "/img/wallpaper/static-mobile/0001/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0001/image.png"
+				"url": "/img/wallpaper/static-mobile/0001/image.webp"
 			},
 			{
 				"title": "0002",
 				"preview": "/img/wallpaper/static-mobile/0002/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0002/image.png"
+				"url": "/img/wallpaper/static-mobile/0002/image.webp"
 			},
 			{
 				"title": "0003",
 				"preview": "/img/wallpaper/static-mobile/0003/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0003/image.png"
+				"url": "/img/wallpaper/static-mobile/0003/image.webp"
 			},
 			{
 				"title": "0004",
 				"preview": "/img/wallpaper/static-mobile/0004/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0004/image.png"
+				"url": "/img/wallpaper/static-mobile/0004/image.webp"
 			},
 			{
 				"title": "DfNHPPcc",
@@ -207,18 +207,18 @@ const config = {
 		"video": [
 			{
 				"title": "尼尔：机械纪元 团队",
-				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webm",
-				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.webm"
+				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.mp4",
+				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.mp4"
 			},
 			{
 				"title": "向往航天的女孩",
-				"preview": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane-pre.webm",
-				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.webm"
+				"preview": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane-pre.mp4",
+				"url": "/img/wallpaper/dynamic/向往航天的女孩/Toy-Aeroplane.mp4"
 			},
 			{
 				"title": "世界很温柔《龙族》上杉绘梨衣",
-				"preview": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85-pre.webm",
-				"url": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85.webm"
+				"preview": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85-pre.mp4",
+				"url": "https://www.leleo.top/img/wallpaper/dynamic/%E4%B8%96%E7%95%8C%E5%BE%88%E6%B8%A9%E6%9F%94%E3%80%8A%E9%BE%99%E6%97%8F%E3%80%8B%E4%B8%8A%E6%9D%89%E7%BB%98%E6%A2%A8%E8%A1%A3/A2EF5E85.mp4"
 			}
 		],
 		"videoMobile": [
@@ -242,7 +242,7 @@ const config = {
 	"projectcards": [
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "博客",
 			"subtitle": "止渊的博客",
 			"text": "跳转到我的另一个网站（专门写博客的内容）",
@@ -269,7 +269,7 @@ const config = {
 		},
 		{
 			"go": "👍 前往",
-			"img": "/img/xmkp/XN.jpg",
+			"img": "/img/xmkp/XN.webp",
 			"title": "XN",
 			"subtitle": "XN博客站",
 			"text": "有很多的内容包括所有\n免费的云服务器主机、免费的二级域名（需要积分但是每天签到都可以领取）",
@@ -278,7 +278,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "我的图床",
 			"subtitle": "我的图床",
 			"text": "我的图床",
@@ -287,7 +287,7 @@ const config = {
 		},
 		{
 			"go": "🎨 前往",
-			"img": "/img/xmkp/csdn.jpg",
+			"img": "/img/xmkp/csdn.webp",
 			"title": "CSDN",
 			"subtitle": "屎山最多的网站",
 			"text": "有用但不多的东西，有的时候可以找到需要的内容，但是大部分要收费（很气人）",
@@ -296,7 +296,7 @@ const config = {
 		},
 		{
 			"go": "💍 前往",
-			"img": "/img/xmkp/github.jpg",
+			"img": "/img/xmkp/github.webp",
 			"title": "github",
 			"subtitle": "纯英文的网站，好用是真的好用",
 			"text": "有用但是翻译看着真难受",
@@ -305,7 +305,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/vercel.jpg",
+			"img": "/img/xmkp/vercel.webp",
 			"title": "vercel",
 			"subtitle": "免费的部署静态博客的网站，使用方法简单",
 			"text": "部署静态网站真舒服，但是只能从github上部署就很无语；虽然还有别的方法但是都好麻烦",
@@ -314,7 +314,7 @@ const config = {
 		},
 		{
 			"go": "📝 前往",
-			"img": "/img/xmkp/yjym.jpg",
+			"img": "/img/xmkp/yjym.webp",
 			"title": "一级域名",
 			"subtitle": "2个免费的org域名",
 			"text": "可以获得免费的.org后缀的域名，但是一个GitHub绑定的账号免费版本的只能有两个域名",
@@ -323,7 +323,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/cf.jpg",
+			"img": "/img/xmkp/cf.webp",
 			"title": "cloudflare",
 			"subtitle": "DNS代理，可以在中国使用虽然有点慢但是安全",
 			"text": "DNS解析（免费），好用可以在中国使用，就是页面有些乱",
@@ -332,7 +332,7 @@ const config = {
 		},
 		{
 			"go": "🗃 前往",
-			"img": "/img/xmkp/Bilibili.jpg",
+			"img": "/img/xmkp/Bilibili.webp",
 			"title": "B站",
 			"subtitle": "不会就去B站，主打一个慢慢学",
 			"text": "不会就去B站搜",
@@ -341,7 +341,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/mubu.jpg",
+			"img": "/img/xmkp/mubu.webp",
 			"title": "幕布",
 			"subtitle": "日常的笔记网站",
 			"text": "比较好用的笔记网站，日常上课做的笔记挺多的",
@@ -350,7 +350,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/mg.jpg",
+			"img": "/img/xmkp/mg.webp",
 			"title": "萌国ICP备案",
 			"subtitle": "ICP备案网站（第三方）",
 			"text": "第三方的icp备案，里面还有网盘、社区、邮箱（全是萌国的）",
@@ -359,7 +359,7 @@ const config = {
 		},
 		{
 			"go": "🔍 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "美国身份信息",
 			"subtitle": "其实啥身份都有",
 			"text": "好用但是不常用，而且自带邮箱只是需要注册登入（还没试过要不要钱）",
@@ -386,7 +386,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "免费梯子部署方法",
 			"subtitle": "自己搭建",
 			"text": "一个博主研究的自己搭建免费梯子，部署很简单，全部是使用cf来进行部署的，并且给了免费域名获取的链接\n可免费注册的CNAME域名\nDNSHE：https://www.dnshe.com/ 部分域名可托管CF，邀请码：CY483A4A4B\nDigitalPlat: https://domain.digitalplat.org/ 部分域名可托管CF\nClouDNS：https://www.cloudns.net/index/lang/chs\ndynv6：https://dynv6.com/\nZoneABC：https://zoneabc.net/",
@@ -422,7 +422,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/hpg.jpg",
+			"img": "/img/xmkp/hpg.webp",
 			"title": "黑苹果屋",
 			"subtitle": "安装下载苹果系统",
 			"text": "黑苹果系统全部系统，什么方法都有",
@@ -440,7 +440,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "网站线路监测",
 			"subtitle": "uptimerobot网站线路的检测",
 			"text": "查看是否正常启动网站",
@@ -449,7 +449,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "mindows",
 			"subtitle": "手机平板刷windows系统的网站",
 			"text": "永久免费可以查找可以刷的机型",
@@ -458,7 +458,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "第三方图床",
 			"subtitle": "免费储存照片的网站",
 			"text": "最大支持单次上传5mb的图片",
@@ -467,7 +467,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "随机密码生成器",
 			"subtitle": "随机密码生成器",
 			"text": "随机生成密码",
@@ -476,7 +476,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "X黑手网",
 			"subtitle": "网络安全学习软件",
 			"text": "里面有大量的网络安全软件还有教程",
@@ -485,7 +485,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "ChmlFrp",
 			"subtitle": "内网穿透",
 			"text": "内网穿透网站自带部署免费域名和ssl认证",
@@ -494,7 +494,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "replit服务器（alist部署）",
 			"subtitle": "暂时部署的alist，一个动态虚拟免费服务器",
 			"text": "不知道可以部署几个但是可以部署openlist",
@@ -503,7 +503,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "新疆幻城网安科技公益大模型api",
 			"subtitle": "新疆幻城网安科技公益大模型api",
 			"text": "免费api模型",
@@ -512,7 +512,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "国家超算互联网",
 			"subtitle": "国家超算互联网",
 			"text": "国家超算互联网；API购买",
@@ -521,7 +521,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "linuxmirrors",
 			"subtitle": "linuxmirrors",
 			"text": "Linux系统镜像源",
@@ -530,7 +530,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "NOVM.NET",
 			"subtitle": "NOVM.NET",
 			"text": "免费云服务，扣除的费用是网络使用费用",
@@ -539,7 +539,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "clawhub",
 			"subtitle": "clawhub",
 			"text": "openclaw的技能网站",
@@ -548,7 +548,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "电脑开荒网",
 			"subtitle": "电脑开荒网",
 			"text": "所有电脑刷机后可以开荒使用，集合了很多软件",
@@ -557,7 +557,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "vulhub",
 			"subtitle": "vulhub",
 			"text": "Vulhub是一个面向安全研究人员和教育工作者的开源预构建漏洞Docker环境集合。",
@@ -566,7 +566,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "攻防世界",
 			"subtitle": "攻防世界",
 			"text": "网络安全课程与比赛报名网站",
@@ -575,7 +575,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "安全KBR",
 			"subtitle": "安全KBR",
 			"text": "关于网络安全的文档",
@@ -584,7 +584,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "ISC.AI",
 			"subtitle": "ISC.AI",
 			"text": "网络安全学院",
@@ -593,7 +593,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "二次元图片壁纸",
 			"subtitle": "konachan",
 			"text": "二次元图片壁纸konachan",
@@ -602,7 +602,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "discord",
 			"subtitle": "bot和app制作包括服务器",
 			"text": "类似与kook和oopz的内容，但是包括Bot，软件和服务器的部署",
@@ -611,7 +611,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "huggingface",
 			"subtitle": "huggingface",
 			"text": "小黄书，部署bot",
@@ -629,7 +629,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
 			"subtitle": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
 			"text": "智慧校园信息平台（学生版）--珠海城市职业技术学院",
@@ -638,7 +638,7 @@ const config = {
 		},
 		{
 			"go": "🚀 前往",
-			"img": "/img/xmkp/sunshine.jpg",
+			"img": "/img/xmkp/sunshine.webp",
 			"title": "DNSHE免费域名管理平台",
 			"subtitle": "免费域名",
 			"text": "可以获取三个免费域名并代理",
