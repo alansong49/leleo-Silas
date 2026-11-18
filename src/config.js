@@ -246,7 +246,7 @@ const config = {
 			"title": "博客",
 			"subtitle": "止渊的博客",
 			"text": "跳转到我的另一个网站（专门写博客的内容）",
-			"url": "https://songnas.dpdns.org/",
+			"url": "https://bk.silas.cc.cd/",
 			"show": false
 		},
 		{
