@@ -1,0 +1,63 @@
+/* 移动端和小屏幕设备样式 */
+@media (max-width: 960px){
+    .leleo-left{
+        &-avatar{
+            .musicplayer-text{
+                font-size: 10px!important;
+            }
+        }
+        &-socialIconsContainer{
+            .setting{
+                transform: scale(0.8);
+                position: fixed;
+                right: 5px;
+                bottom: 5px;
+                z-index: 99999;
+            }
+        }
+    }
+}
+
+/* 超小屏幕设备 (xs) */
+@media (max-width: 600px) {
+    .v-card {
+        font-size: 0.875rem;
+    }
+    
+    .leleo-left-card {
+        margin: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    .volume-control-container {
+        margin-top: 0.25rem;
+    }
+}
+
+/* 小屏幕设备 (sm) */
+@media (min-width: 600px) and (max-width: 960px) {
+    .v-card {
+        font-size: 0.9375rem;
+    }
+}
+
+/* 中等屏幕设备 (md) */
+@media (min-width: 960px) and (max-width: 1264px) {
+    .leleo-left {
+        padding: 1rem;
+    }
+}
+
+/* 大屏幕设备 (lg) */
+@media (min-width: 1264px) and (max-width: 1904px) {
+    .leleo-left {
+        padding: 1.5rem;
+    }
+}
+
+/* 超大屏幕设备 (xl) */
+@media (min-width: 1904px) {
+    .leleo-left {
+        padding: 2rem;
+    }
+}
